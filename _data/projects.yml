@@ -50,5 +50,5 @@
     iterations. The contribution of this paper is threefold: 1) the proposition of a new method to construct taxonomies
     from a large set of scientific papers, 2) a method to precompile taxonomy information into matrices that will be
     quickly queried, and 3) an objective method to automatically evaluate the constructed taxonomies without requiring
-    human evaluation..
+    human evaluation.
   paper: https://link.springer.com/chapter/10.1007/978-3-031-01333-1_3
