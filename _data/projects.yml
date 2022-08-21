@@ -24,6 +24,7 @@
     overlapping spans compared to strong baseline while maintaining competitive metric
     performance. Code is available at https://github.com/urchade/GNNer.
   paper: https://aclanthology.org/2022.acl-srw.9
+  poster: assets/gnner-poster.pdf
 
 - id: ida
   title: "Towards Automation of Topic Taxonomy Construction"
