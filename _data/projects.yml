@@ -10,6 +10,7 @@
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
   type: preprint
+  venue: "ACL Student Research Workshop 2022"
   abstract: >
     There are two main paradigms for Named Entity Recognition (NER): sequence labelling
     and span classification. Sequence labelling aims to assign a label to each word in
@@ -23,3 +24,31 @@
     overlapping spans compared to strong baseline while maintaining competitive metric
     performance. Code is available at https://github.com/urchade/GNNer.
   paper: https://aclanthology.org/2022.acl-srw.9
+
+- id: ida
+  title: "Towards Automation of Topic Taxonomy Construction"
+  authors:
+    - name: Yann Dauxais
+      website: http://dauxais.fr
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Matthieu Laneuville
+    - name: Simon David Hernandez
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Charlie Grosman
+  type: preprint
+  venue: "IDA 2022: Advances in Intelligent Data Analysis"
+  abstract: >
+    The automation of taxonomy construction has increased in popularity recently. Such an interest for the domain
+    has been motivated by the large number of new scientific papers published each year that implies a growing
+    difficulty in following the new topics of the different scientific domains and their importance in the topic
+    hierarchy. In this paper, we propose a way to automatically construct topic taxonomies from millions of scientific
+    article abstracts and ways to automatically evaluate this construction. While, to our knowledge, other approaches
+    rely on pipelines of models and human evaluation to validate them, we chose to rely on simple models that are
+    easier to evaluate automatically and, thus, promote the improvement of our models thanks to a large number of 
+    iterations. The contribution of this paper is threefold: 1) the proposition of a new method to construct taxonomies
+    from a large set of scientific papers, 2) a method to precompile taxonomy information into matrices that will be
+    quickly queried, and 3) an objective method to automatically evaluate the constructed taxonomies without requiring
+    human evaluation..
+  paper: https://link.springer.com/chapter/10.1007/978-3-031-01333-1_3
