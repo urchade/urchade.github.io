@@ -1,5 +1,5 @@
 - id: impact
-  title: "Impact of Pretraining Term Frequencies on Few-Shot Reasoning"
+  title: "GNNer: Reducing Overlapping in Span-based NER Using Graph Neural Networks"
   authors:
     - name: Urchade Zaratiana
       website: urchade.github.io
