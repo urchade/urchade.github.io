@@ -13,7 +13,7 @@
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
   type: preprint
-  venue: "NeurIPS 2022 2nd Workshop on Efficient Natural Language and Speech Processing, "
+  venue: "2nd Workshop on Efficient Natural Language and Speech Processing @ NeurIPS 2022"
   abstract: >
     Extractive question answering (ExQA) is an essential task for Natural Language Processing. 
     The dominant approach to ExQA is one that represents the input sequence tokens (question and passage)
