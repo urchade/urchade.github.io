@@ -1,3 +1,31 @@
+- id: dyrex
+  title: "DyReX: Dynamic Query Representation for Extractive Question Answering"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Niama El Khbir
+    - name: Dennis Núñez
+      website: https://dennishnf.com
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Nadi Tomeh
+      website: https://lipn.univ-paris13.fr/~tomeh/
+    - name: Thierry Charnois
+      website: https://lipn.univ-paris13.fr/~charnois/
+  type: preprint
+  venue: "NeurIPS 2022 2nd Workshop on Efficient Natural Language and Speech Processing, "
+  abstract: >
+    Extractive question answering (ExQA) is an essential task for Natural Language Processing. 
+    The dominant approach to ExQA is one that represents the input sequence tokens (question and passage)
+    with a pre-trained transformer, then uses two learned query vectors to compute distributions over
+    the start and end answer span positions. These query vectors lack the context of the inputs,
+    which can be a bottleneck for the model performance. To address this problem, we propose \textit{DyREx},
+    a generalization of the \textit{vanilla} approach where we dynamically compute query vectors given
+    the input, using an attention mechanism through transformer layers. Empirical observations
+    demonstrate that our approach consistently improves the performance over the standard one.
+    The code and accompanying files for running the experiments are available at \url{https://github.com/urchade/DyReX}.
+  paper: assets/DyREX_camera_ready.pdf
+
 - id: impact
   title: "GNNer: Reducing Overlapping in Span-based NER Using Graph Neural Networks"
   authors:
