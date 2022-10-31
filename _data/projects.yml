@@ -38,7 +38,7 @@
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
   type: preprint
-  venue: "ACL Student Research Workshop 2022"
+  venue: "ACL SRW 2022"
   abstract: >
     There are two main paradigms for Named Entity Recognition (NER): sequence labelling
     and span classification. Sequence labelling aims to assign a label to each word in
