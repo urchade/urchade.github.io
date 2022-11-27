@@ -1,3 +1,34 @@
+- id: dyref
+  title: "DyReF: Extractive Question Answering with Dynamic Query Representation for Free"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Niama El Khbir
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Nadi Tomeh
+      website: https://lipn.univ-paris13.fr/~tomeh/
+    - name: Thierry Charnois
+      website: https://lipn.univ-paris13.fr/~charnois/
+  type: preprint
+  venue: "Workshop on Transfer Learning for Natural Language Processing"
+  abstract: >
+    Extractive QA is an important NLP task with numerous real-world applications. The most common method
+    for extractive QA is to encode the input sequence with a pretrained Transformer such as BERT, and
+    then compute the probability of the start and end positions of span answers using two leaned query
+    vectors. This method has been shown to be effective and hard to outperform. However, the query
+    vectors are static, meaning they are the same regardless of the input, which can be a challenging
+    issue in improving the model's performance. To address this problem, we propose 
+    \texttt{DyReF} (\texttt{Dy}namic \texttt{Re}presentation for \texttt{F}ree), a model that dynamically
+    learns query vectors for free, i.e. without adding any parameters, by concatenating the query vectors
+    with the embeddings of the input tokens of the Transformer layers. In this way, the query vectors can
+    aggregate information from the source sentence and adapt to the question, while the representations of
+    the input tokens are also dependent on the queries, allowing for better task specialization. 
+    We demonstrate empirically that our simple approach outperforms strong baseline in a variety
+    of extractive question answering benchmark datasets. The code is publicly 
+    available at \url{https://github.com/urchade/DyReF}.
+  paper: assets/dyref.pdf
+
 - id: dyrex
   title: "DyReX: Dynamic Query Representation for Extractive Question Answering"
   authors:
