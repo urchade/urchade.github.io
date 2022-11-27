@@ -27,7 +27,7 @@
     We demonstrate empirically that our simple approach outperforms strong baseline in a variety
     of extractive question answering benchmark datasets. The code is publicly 
     available at \url{https://github.com/urchade/DyReF}.
-  paper: assets/dyref.pdf
+  paper: DyREF_tl4nlp_camera_ready.pdf
 
 - id: dyrex
   title: "DyReX: Dynamic Query Representation for Extractive Question Answering"
