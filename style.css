@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+header {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 10px;
+}
+
+.designation {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Research Section */
+#research {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.venue,
+.authors {
+  color: #777;
+  margin-top: 5px;
+}
+
+.abstract {
+  margin-top: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.buttons .btn {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buttons .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list li a {
+  color: #333;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.contact-list li a i {
+  margin-right: 5px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
