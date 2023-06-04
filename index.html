@@ -3,96 +3,63 @@ layout: default
 title: "Urchade Zaratiana"
 ---
 
-<div class="jumbotron vertical-center">
-
-  <div class="row">
-    <div class="col-lg-3 col-md-12">
-      <img class="rounded-circle img-fluid img-center" width="256px" src="assets/portrait.png">
+<div class="container">
+    <div class="row align-items-center py-5">
+        <div class="col-lg-4">
+            <img class="rounded-circle img-fluid mx-auto d-block" src="assets/portrait.png" width="200">
+        </div>
+        <div class="col-lg-8">
+            <h1 class="mb-3">Urchade Zaratiana</h1>
+            <h5 class="mb-3">PhD Student at LIPN</h5>
+            <p class="text-justify">
+                I am a PhD student at Laboratoire Informatique de Paris Nord (LIPN) under the supervision of Nadi Tomeh and Thierry Charnois.
+                My research focuses on structured prediction for Natural Language Processing. I am also interested in Representation Learning for NLP, 
+                Graph Neural Networks and Question Answering.
+            </p>
+        </div>
     </div>
-
-    <div class="col-lg-9 col-md-12">
-      <h2 class="mt-0">Urchade Zaratiana</h2>
-      <h4 class="mt-0">PhD Student at LIPN</h4>
-      <p class="text-justify">
-        I am a PhD student at Laboratoire Informatique de Paris Nord (LIPN) under the supervision of Nadi Tomeh and Thierry Charnois.
-        My research focuses on structured prediction for Natural Language Processing. I am also interested in Representation Learning for NLP, 
-        Graph Neural Networks and Question Answering.
-      </p>
-    </div>
-  </div>
 </div>
 
-<a name="research">
-<div id="research" class="mu-4">
-  <h2>Research</h2>
-  {% for project in site.data.projects %}
-  <div class="card">
-    <!-- TODO: UPLOAD PROJECT IMAGES
-    <img class="card-img-top" src="{{ project.image }}">
-    -->
-    <div class="card-body">
-
-      <h4 class="card-title">{{ project.title }}</h5>
-
-      <h6 class="venue">{{ project.venue }}</h6>
-
-      <h6 class="authors">
-        {% for author in project.authors %}
-          {% if author.website %}
-            <a href="{{ author.website }}">{{ author.name }}</a>
-          {% else %}
-            <a>{{ author.name }}</a>
-          {% endif %}
-          {% if forloop.last == false %}
-          -
-          {% endif %}
-        {% endfor %}
-      </h6>
-
-
-      <a class="btn btn-primary" data-toggle="collapse" href="#{{ project.id }}" role="button" aria-expanded="false" aria-controls="{{ project.id }}">
-        Abstract
-      </a>
-
-      {% if project.paper %}
-      <a role="button" class="btn btn-primary" target="_blank" href={{ project.paper }}>Paper</a>
-      {% endif %}
-
-      {% if project.poster %}
-      <a role="button" class="btn btn-primary" target="_blank" href={{ project.poster }}>Poster</a>
-      {% endif %}
-
-      {% if project.github %}
-      <a role="button" class="btn btn-primary" target="_blank" href={{ project.github }}>Code</a>
-      {% endif %}
-
-      {% if project.dataset %}
-      <a role="button" class="btn btn-primary" target="_blank" href={{ project.dataset }}>Dataset</a>
-      {% endif %}
-
-      <div class="collapse" id="{{ project.id }}">
-        <br/>
-        <p class="card card-body text-justify">
-          {{ project.abstract}}
-        </p>
-      </div>
-
+<div class="container py-5" id="research">
+    <h2 class="mb-4">Research</h2>
+    {% for project in site.data.projects %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">{{ project.title }}</h4>
+            <h6 class="venue">{{ project.venue }}</h6>
+            <h6 class="authors">
+                {% for author in project.authors %}
+                    {% if author.website %}
+                    <a href="{{ author.website }}">{{ author.name }}</a>
+                    {% else %}
+                    <a>{{ author.name }}</a>
+                    {% endif %}
+                    {% if forloop.last == false %} - {% endif %}
+                {% endfor %}
+            </h6>
+            <div class="mt-2">
+                <a class="btn btn-primary" data-toggle="collapse" href="#{{ project.id }}" role="button" aria-expanded="false" aria-controls="{{ project.id }}">Abstract</a>
+                {% if project.paper %} <a class="btn btn-secondary ml-1" target="_blank" href={{ project.paper }}>Paper</a> {% endif %}
+                {% if project.poster %} <a class="btn btn-secondary ml-1" target="_blank" href={{ project.poster }}>Poster</a> {% endif %}
+                {% if project.github %} <a class="btn btn-secondary ml-1" target="_blank" href={{ project.github }}>Code</a> {% endif %}
+                {% if project.dataset %} <a class="btn btn-secondary ml-1" target="_blank" href={{ project.dataset }}>Dataset</a> {% endif %}
+            </div>
+            <div class="collapse" id="{{ project.id }}">
+                <p class="card card-body text-justify mt-3">
+                    {{ project.abstract }}
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <br/>
-  {% endfor %}
+    {% endfor %}
 </div>
-</a>
 
-<a name="contact">
-<div id="contact" class="mt-4 mu-4">
-  <h2>Contact</h2>
-  <div class="listgroup list-group-flush">
-    <a href="mailto:zaratiana@lipn.fr" class="list-group-item"><i class="fas fa-envelope fa-2x"></i>&nbsp; Email</a>
-    <a href="https://github.com/urchade" class="list-group-item"><i class="fab fa-github fa-2x"></i>&nbsp; GitHub</a>
-    <a href="https://www.linkedin.com/in/urchade-zaratiana-36ba9814b" class="list-group-item"><i class="fab fa-linkedin fa-2x"></i>&nbsp; LinkedIn</a>
-    <a href="https://scholar.google.com/citations?hl=en&user=nQTXsu4AAAAJ" class="list-group-item"><i class="fab fa-google fa-2x"></i>&nbsp; Google scholar</a>
-  </div>
+<div class="container py-5" id="contact">
+    <h2 class="mb-4">Contact</h2>
+    <ul class="list-unstyled">
+        <li><a href="mailto:zaratiana@lipn.fr"><i class="fas fa-envelope fa-lg"></i>&nbsp; Email</a></li>
+        <li><a href="https://github.com/urchade"><i class="fab fa-github fa-lg"></i>&nbsp; GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/urchade-zaratiana-36ba9814b"><i class="fab fa-linkedin fa-lg"></i>&nbsp; LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=nQTXsu4AAAAJ"><i class="fab fa-google fa-lg"></i>&nbsp; Google Scholar</a></li>
+    </ul>
 </div>
-</a>
-
