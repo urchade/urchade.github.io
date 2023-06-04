@@ -10,7 +10,7 @@
       website: https://lipn.univ-paris13.fr/~tomeh/
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
-  type: preprint
+  type: workshop
   venue: "Workshop on Transfer Learning for Natural Language Processing"
   abstract: >
     Extractive QA is an important NLP task with numerous real-world applications. The most common method
@@ -43,7 +43,7 @@
       website: https://lipn.univ-paris13.fr/~tomeh/
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
-  type: preprint
+  type: workshop
   venue: "2nd Workshop on Efficient Natural Language and Speech Processing @ NeurIPS 2022"
   abstract: >
     Extractive question answering (ExQA) is an essential task for Natural Language Processing. 
@@ -68,7 +68,7 @@
       website: https://lipn.univ-paris13.fr/~holat/research.html
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
-  type: preprint
+  type: workshop
   venue: "ACL SRW 2022"
   abstract: >
     There are two main paradigms for Named Entity Recognition (NER): sequence labelling
@@ -97,7 +97,7 @@
     - name: Pierre Holat
       website: https://lipn.univ-paris13.fr/~holat/research.html
     - name: Charlie Grosman
-  type: preprint
+  type: conference
   venue: "IDA 2022: Advances in Intelligent Data Analysis"
   abstract: >
     The automation of taxonomy construction has increased in popularity recently. Such an interest for the domain
