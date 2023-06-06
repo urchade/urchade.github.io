@@ -13,7 +13,7 @@
   venue: "Workshop on Unimodal and Multimodal Induction of Linguistic Structures @ EMNLP 2022"
   abstract: >
     Named Entity Recognition (NER) is an important task in Natural Language Processing with applications in many domains. While the dominant paradigm of NER is sequence labelling, span-based approaches have become very popular in recent times but are less well understood. In this work, we study different aspects of span-based NER, namely the span representation, learning strategy, and decoding algorithms to avoid span overlap. We also propose an exact algorithm that efficiently finds the set of non-overlapping spans that maximizes a global score, given a list of candidate spans. We performed our study on three benchmark NER datasets from different domains. We make our code publicly available at https://github.com/urchade/span-structured-prediction.
-  paper: https://aclanthology.org/2022.umios-1.2.pdf
+  paper: https://aclanthology.org/2022.umios-1.1.pdf
   
 - id: gss
   title: "Global Span Selection for Named Entity Recognition"
