@@ -14,6 +14,37 @@
   abstract: >
     Named Entity Recognition (NER) is an important task in Natural Language Processing with applications in many domains. While the dominant paradigm of NER is sequence labelling, span-based approaches have become very popular in recent times but are less well understood. In this work, we study different aspects of span-based NER, namely the span representation, learning strategy, and decoding algorithms to avoid span overlap. We also propose an exact algorithm that efficiently finds the set of non-overlapping spans that maximizes a global score, given a list of candidate spans. We performed our study on three benchmark NER datasets from different domains. We make our code publicly available at https://github.com/urchade/span-structured-prediction.
   paper: https://aclanthology.org/2022.umios-1.1.pdf
+ 
+- id: dyref
+  title: "DyReF: Extractive Question Answering with Dynamic Query Representation for Free"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Niama El Khbir
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Nadi Tomeh
+      website: https://lipn.univ-paris13.fr/~tomeh/
+    - name: Thierry Charnois
+      website: https://lipn.univ-paris13.fr/~charnois/
+  type: workshop
+  venue: "Workshop on Transfer Learning for Natural Language Processing @ NeurIPS 2022"
+  abstract: >
+    Extractive QA is an important NLP task with numerous real-world applications. The most common method
+    for extractive QA is to encode the input sequence with a pretrained Transformer such as BERT, and
+    then compute the probability of the start and end positions of span answers using two leaned query
+    vectors. This method has been shown to be effective and hard to outperform. However, the query
+    vectors are static, meaning they are the same regardless of the input, which can be a challenging
+    issue in improving the model's performance. To address this problem, we propose 
+    \texttt{DyReF} (\texttt{Dy}namic \texttt{Re}presentation for \texttt{F}ree), a model that dynamically
+    learns query vectors for free, i.e. without adding any parameters, by concatenating the query vectors
+    with the embeddings of the input tokens of the Transformer layers. In this way, the query vectors can
+    aggregate information from the source sentence and adapt to the question, while the representations of
+    the input tokens are also dependent on the queries, allowing for better task specialization. 
+    We demonstrate empirically that our simple approach outperforms strong baseline in a variety
+    of extractive question answering benchmark datasets. The code is publicly 
+    available at \url{https://github.com/urchade/DyReF}.
+  paper: assets/dyreff.pdf
   
 - id: gss
   title: "Global Span Selection for Named Entity Recognition"
@@ -33,37 +64,6 @@
     Named Entity Recognition (NER) is an important task in Natural Language Processing with applications in many domains. In this paper, we describe a novel approach to named entity recognition, in which we output a set of spans (i.e., segmentations) by maximizing a global score. During training, we optimize our model by maximizing the probability of the gold segmentation. During inference, we use dynamic programming to select the best segmentation under a linear time complexity. We prove that our approach outperforms CRF and semi-CRF models for Named Entity Recognition. We will make our code publicly available.
   paper: https://aclanthology.org/2022.umios-1.2.pdf
   
-- id: dyref
-  title: "DyReF: Extractive Question Answering with Dynamic Query Representation for Free"
-  authors:
-    - name: Urchade Zaratiana
-      website: urchade.github.io
-    - name: Niama El Khbir
-    - name: Pierre Holat
-      website: https://lipn.univ-paris13.fr/~holat/research.html
-    - name: Nadi Tomeh
-      website: https://lipn.univ-paris13.fr/~tomeh/
-    - name: Thierry Charnois
-      website: https://lipn.univ-paris13.fr/~charnois/
-  type: workshop
-  venue: "Workshop on Transfer Learning for Natural Language Processing"
-  abstract: >
-    Extractive QA is an important NLP task with numerous real-world applications. The most common method
-    for extractive QA is to encode the input sequence with a pretrained Transformer such as BERT, and
-    then compute the probability of the start and end positions of span answers using two leaned query
-    vectors. This method has been shown to be effective and hard to outperform. However, the query
-    vectors are static, meaning they are the same regardless of the input, which can be a challenging
-    issue in improving the model's performance. To address this problem, we propose 
-    \texttt{DyReF} (\texttt{Dy}namic \texttt{Re}presentation for \texttt{F}ree), a model that dynamically
-    learns query vectors for free, i.e. without adding any parameters, by concatenating the query vectors
-    with the embeddings of the input tokens of the Transformer layers. In this way, the query vectors can
-    aggregate information from the source sentence and adapt to the question, while the representations of
-    the input tokens are also dependent on the queries, allowing for better task specialization. 
-    We demonstrate empirically that our simple approach outperforms strong baseline in a variety
-    of extractive question answering benchmark datasets. The code is publicly 
-    available at \url{https://github.com/urchade/DyReF}.
-  paper: assets/dyreff.pdf
-
 - id: dyrex
   title: "DyReX: Dynamic Query Representation for Extractive Question Answering"
   authors:
