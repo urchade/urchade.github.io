@@ -1,4 +1,4 @@
-- id: gss
+- id: fsemi
   title: "Filtered Semi-Markov CRF"
   authors:
     - name: Urchade Zaratiana
@@ -14,6 +14,23 @@
   abstract: >
     Semi-Markov CRF has been proposed as an alternative to the traditional Linear Chain CRF for text segmentation tasks such as Named Entity Recognition (NER). Unlike CRF, which treats text segmentation as token-level prediction, Semi-CRF considers segments as the basic unit, making it more expressive. However, Semi-CRF suffers from two major drawbacks: (1) quadratic complexity over sequence length, as it operates on every span of the input sequence, and (2) inferior performance compared to CRF for sequence labeling tasks like NER. In this paper, we introduce Filtered Semi-Markov CRF, a variant of Semi-CRF that addresses these issues by incorporating a filtering step to eliminate irrelevant segments, reducing complexity and search space. Our approach is evaluated on several NER benchmarks, where it outperforms both CRF and Semi-CRF while being significantly faster. The implementation of our method will be made publicly available.
     paper: assets/Filtered_Semi_CRF.pdf
+
+- id: graph
+  title: "An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Nadi Tomeh
+      website: https://lipn.univ-paris13.fr/~tomeh/
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Thierry Charnois
+      website: https://lipn.univ-paris13.fr/~charnois/
+  type: conference
+  venue: "Under submission (Preliminary version accepted at SPIGM @ ICML 2023)"
+  abstract: >
+    In this paper, we propose a novel method for joint entity and relation extract from unstructured text by framing it as a conditional sequence generation problem. In contrast to conventional generative information extraction models that generate text as output, our approach generates a linearized graph where nodes represent text spans while the edges/relation of the graph represent relation triples. For that, our method employs a transformer encoder-decoder architecture with pointing mechanism on a dynamic vocabulary of spans and relation types. Particularly, our model can capture the structural characteristics and boundaries of entities and relations through span representation, while simultaneously grounding the generated output in the original text thanks to pointer mechanism. Evaluation on benchmark datasets validates the effectiveness of our approach, demonstrating state-of-the-art results in entity and relation extraction tasks.
+  paper: https://openreview.net/forum?id=5sLIuaW5wT&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2023%2FWorkshop%2FSPIGM%2FAuthors%23your-submissions)
 
 - id: gss
   title: "Named Entity Recognition as Structured Span Prediction"
