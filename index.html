@@ -100,6 +100,58 @@ title: "Urchade Zaratiana"
         {% endfor %}
     </div>
 
+          <!-- Conference Publications Section -->
+    <h3 class="mb-4">Work in progress</h3>
+    <div class="accordion" id="conferencePublications">
+        {% for project in site.data.projects %}
+        {% if project.type == 'preprint' %}
+        <div class="card">
+            <div class="card-header" id="heading{{ project.id }}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
+                        {{ project.title }} 
+                    </button> <br> 
+                      <small class="text-muted">{{ project.venue }}</small>
+                </h5>
+            </div>
+            <div id="collapse{{ project.id }}" class="collapse" aria-labelledby="heading{{ project.id }}" data-parent="#conferencePublications">
+                <div class="card-body row">
+                    {% if project.image %}
+                    <div class="col-md-3">
+                        <img src="{{ project.image }}" class="img-fluid" alt="Publication Image">
+                    </div>
+                    <div class="col-md-9">
+                    {% else %}
+                    <div class="col-12">
+                    {% endif %}
+                        <div class="authors mb-2">
+                        {% for author in project.authors %}
+                        {% if author.website %}
+                        <a href="{{ author.website }}">{{ author.name }}</a>
+                        {% else %}
+                        {{ author.name }}
+                        {% endif %}
+                        {% if forloop.last == false %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="project-links mb-2">
+                        {% if project.paper %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.paper }}>Paper</a> {% endif %}
+                        {% if project.poster %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.poster }}>Poster</a> {% endif %}
+                        {% if project.github %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.github }}>Code</a> {% endif %}
+                        {% if project.dataset %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.dataset }}>Dataset</a> {% endif %}
+                    </div>
+                    <p class="text-justify">
+                        {{ project.abstract }}
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <br>
+        {% endif %}
+        {% endfor %}
+    </div>
+
     <!-- Workshop Publications Section -->
     <h3 class="mb-4 mt-5">Workshop Publications</h3>
     <div class="accordion" id="workshopPublications">
