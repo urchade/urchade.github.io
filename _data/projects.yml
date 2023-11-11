@@ -27,7 +27,7 @@
       website: https://lipn.univ-paris13.fr/~holat/research.html
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
-  type: conference
+  type: preprint
   venue: "Under submission (Preliminary version accepted at SPIGM @ ICML 2023)"
   abstract: >
     In this paper, we propose a novel method for joint entity and relation extract from unstructured text by framing it as a conditional sequence generation problem. In contrast to conventional generative information extraction models that generate text as output, our approach generates a linearized graph where nodes represent text spans while the edges/relation of the graph represent relation triples. For that, our method employs a transformer encoder-decoder architecture with pointing mechanism on a dynamic vocabulary of spans and relation types. Particularly, our model can capture the structural characteristics and boundaries of entities and relations through span representation, while simultaneously grounding the generated output in the original text thanks to pointer mechanism. Evaluation on benchmark datasets validates the effectiveness of our approach, demonstrating state-of-the-art results in entity and relation extraction tasks.
@@ -44,7 +44,7 @@
       website: https://lipn.univ-paris13.fr/~holat/research.html
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
-  type: conference
+  type: preprint
   venue: "Under submission"
   abstract: >
     Extractive Question Answering (ExQA) is an NLP task that aims to accurately identify the location of the answer within a given document, given a question. It is typically achieved by independently predicting the start and end positions of the answer. While simple, it outperforms more structured approaches, such as jointly predicting the start and end positions, when working with large-scale data. However, when data is limited, the joint objective, which has a stronger inductive bias, proves to be more effective, but at the cost of increased computational complexity. We propose a new ExQA approach that combines the efficiency of independent prediction with the advantages of the joint objective by allowing for soft interactions between start and end positions. Our experiments show that our approach outperforms existing baselines in both high and low data settings.
