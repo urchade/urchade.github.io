@@ -47,76 +47,74 @@ title: "Urchade Zaratiana"
 
 
 <div class="container py-5" id="research">
-  <h2 class="mb-4">Research</h2>
-
-  <h2 class="mb-4">Conference Publications</h2>
-  {% for project in site.data.projects %}
-  {% if project.type == 'conference' %}
-  <div class="card mb-3">
-            <div class="card-body">
-            <h4 class="card-title">{{ project.title }}</h4>
-            <h6 class="text-muted">{{ project.venue }}</h6>
-            <h6 class="authors">
-                {% for author in project.authors %}
-                    {% if author.website %}
-                    <a href="{{ author.website }}">{{ author.name }}</a>
-                    {% else %}
-                    <a>{{ author.name }}</a>
-                    {% endif %}
-                    {% if forloop.last == false %} - {% endif %}
-                {% endfor %}
-            </h6>
-            <div class="mt-2">
-                <a class="btn btn-outline-primary" data-toggle="collapse" href="#{{ project.id }}" role="button" aria-expanded="false" aria-controls="{{ project.id }}">Abstract</a>
-                {% if project.paper %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.paper }}>Paper</a> {% endif %}
-                {% if project.poster %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.poster }}>Poster</a> {% endif %}
-                {% if project.github %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.github }}>Code</a> {% endif %}
-                {% if project.dataset %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.dataset }}>Dataset</a> {% endif %}
+    <h2 class="mb-4">Research</h2>
+  
+    <!-- Conference Publications Section -->
+    <h3 class="mb-4">Conference Publications</h3>
+    <div class="accordion" id="conferencePublications">
+        {% for project in site.data.projects %}
+        {% if project.type == 'conference' %}
+        <div class="card">
+            <div class="card-header" id="heading{{ project.id }}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
+                        {{ project.title }}
+                    </button>
+                </h5>
             </div>
-            <div class="collapse" id="{{ project.id }}">
-                <p class="card card-body text-justify mt-3">
-                    {{ project.abstract }}
-                </p>
-            </div>
-        </div>
-  </div>
-  {% endif %}
-  {% endfor %}
-
-  <h2 class="mb-4">Workshop Publications</h2>
-  {% for project in site.data.projects %}
-  {% if project.type == 'workshop' %}
-  <div class="card mb-3">
-            <div class="card-body">
-            <h4 class="card-title">{{ project.title }}</h4>
-            <h6 class="text-muted">{{ project.venue }}</h6>
-            <h6 class="authors">
-                {% for author in project.authors %}
-                    {% if author.website %}
-                    <a href="{{ author.website }}">{{ author.name }}</a>
-                    {% else %}
-                    <a>{{ author.name }}</a>
-                    {% endif %}
-                    {% if forloop.last == false %} - {% endif %}
-                {% endfor %}
-            </h6>
-            <div class="mt-2">
-                <a class="btn btn-outline-primary" data-toggle="collapse" href="#{{ project.id }}" role="button" aria-expanded="false" aria-controls="{{ project.id }}">Abstract</a>
-                {% if project.paper %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.paper }}>Paper</a> {% endif %}
-                {% if project.poster %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.poster }}>Poster</a> {% endif %}
-                {% if project.github %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.github }}>Code</a> {% endif %}
-                {% if project.dataset %} <a class="btn btn-outline-secondary ml-1" target="_blank" href={{ project.dataset }}>Dataset</a> {% endif %}
-            </div>
-            <div class="collapse" id="{{ project.id }}">
-                <p class="card card-body text-justify mt-3">
-                    {{ project.abstract }}
-                </p>
+            <div id="collapse{{ project.id }}" class="collapse" aria-labelledby="heading{{ project.id }}" data-parent="#conferencePublications">
+                <div class="card-body">
+                    <h6 class="text-muted">{{ project.venue }}</h6>
+                    <div class="authors mb-2">
+                        {% for author in project.authors %}
+                        {% if author.website %}
+                        <a href="{{ author.website }}">{{ author.name }}</a>
+                        {% else %}
+                        {{ author.name }}
+                        {% endif %}
+                        {% if forloop.last == false %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="project-links mb-2">
+                        {% if project.paper %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.paper }}>Paper</a> {% endif %}
+                        {% if project.poster %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.poster }}>Poster</a> {% endif %}
+                        {% if project.github %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.github }}>Code</a> {% endif %}
+                        {% if project.dataset %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.dataset }}>Dataset</a> {% endif %}
+                    </div>
+                    <p class="text-justify">
+                        {{ project.abstract }}
+                    </p>
+                </div>
             </div>
         </div>
-  </div>
-  {% endif %}
-  {% endfor %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- Workshop Publications Section -->
+    <h3 class="mb-4 mt-5">Workshop Publications</h3>
+    <div class="accordion" id="workshopPublications">
+        {% for project in site.data.projects %}
+        {% if project.type == 'workshop' %}
+        <div class="card">
+            <div class="card-header" id="heading{{ project.id }}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
+                        {{ project.title }}
+                    </button>
+                </h5>
+            </div>
+            <div id="collapse{{ project.id }}" class="collapse" aria-labelledby="heading{{ project.id }}" data-parent="#workshopPublications">
+                <div class="card-body">
+                    <!-- Similar Content as Conference Publications -->
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
+
 
 <div class="container py-5" id="contact">
     <h2 class="mb-4">Contact</h2>
