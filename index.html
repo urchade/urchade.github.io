@@ -48,7 +48,7 @@ title: "Urchade Zaratiana"
 
 <div class="container py-5" id="research">
     <h2 class="mb-4">Research</h2>
-  
+
     <!-- Conference Publications Section -->
     <h3 class="mb-4">Conference Publications</h3>
     <div class="accordion" id="conferencePublications">
@@ -58,32 +58,22 @@ title: "Urchade Zaratiana"
             <div class="card-header" id="heading{{ project.id }}">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
-                        {{ project.title }}
+                        {{ project.title }} - <small class="text-muted">{{ project.venue }}</small>
                     </button>
                 </h5>
             </div>
             <div id="collapse{{ project.id }}" class="collapse" aria-labelledby="heading{{ project.id }}" data-parent="#conferencePublications">
-                <div class="card-body">
-                    <h6 class="text-muted">{{ project.venue }}</h6>
-                    <div class="authors mb-2">
-                        {% for author in project.authors %}
-                        {% if author.website %}
-                        <a href="{{ author.website }}">{{ author.name }}</a>
-                        {% else %}
-                        {{ author.name }}
-                        {% endif %}
-                        {% if forloop.last == false %}, {% endif %}
-                        {% endfor %}
+                <div class="card-body row">
+                    {% if project.image %}
+                    <div class="col-md-3">
+                        <img src="{{ project.image }}" class="img-fluid" alt="Publication Image">
                     </div>
-                    <div class="project-links mb-2">
-                        {% if project.paper %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.paper }}>Paper</a> {% endif %}
-                        {% if project.poster %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.poster }}>Poster</a> {% endif %}
-                        {% if project.github %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.github }}>Code</a> {% endif %}
-                        {% if project.dataset %} <a class="btn btn-outline-secondary mr-2" target="_blank" href={{ project.dataset }}>Dataset</a> {% endif %}
+                    <div class="col-md-9">
+                    {% else %}
+                    <div class="col-12">
+                    {% endif %}
+                        <!-- Publication Details Here -->
                     </div>
-                    <p class="text-justify">
-                        {{ project.abstract }}
-                    </p>
                 </div>
             </div>
         </div>
@@ -100,13 +90,22 @@ title: "Urchade Zaratiana"
             <div class="card-header" id="heading{{ project.id }}">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
-                        {{ project.title }}
+                        {{ project.title }} - <small class="text-muted">{{ project.venue }}</small>
                     </button>
                 </h5>
             </div>
             <div id="collapse{{ project.id }}" class="collapse" aria-labelledby="heading{{ project.id }}" data-parent="#workshopPublications">
-                <div class="card-body">
-                    <!-- Similar Content as Conference Publications -->
+                <div class="card-body row">
+                    {% if project.image %}
+                    <div class="col-md-3">
+                        <img src="{{ project.image }}" class="img-fluid" alt="Publication Image">
+                    </div>
+                    <div class="col-md-9">
+                    {% else %}
+                    <div class="col-12">
+                    {% endif %}
+                        <!-- Similar Content as Conference Publications -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,6 +113,7 @@ title: "Urchade Zaratiana"
         {% endfor %}
     </div>
 </div>
+
 
 
 <div class="container py-5" id="contact">
