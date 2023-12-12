@@ -21,7 +21,7 @@
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
   type: conference
-  venue: "AAAI 2024 (Preliminary version accepted at SPIGM @ ICML 2023)"
+  venue: "Accepted at AAAI 2024"
   abstract: >
     In this paper, we propose a novel method for joint entity and relation extract from unstructured text by framing it as a conditional sequence generation problem. In contrast to conventional generative information extraction models that generate text as output, our approach generates a linearized graph where nodes represent text spans while the edges/relation of the graph represent relation triples. For that, our method employs a transformer encoder-decoder architecture with pointing mechanism on a dynamic vocabulary of spans and relation types. Particularly, our model can capture the structural characteristics and boundaries of entities and relations through span representation, while simultaneously grounding the generated output in the original text thanks to pointer mechanism. Evaluation on benchmark datasets validates the effectiveness of our approach, demonstrating state-of-the-art results in entity and relation extraction tasks.
   paper: https://openreview.net/forum?id=5sLIuaW5wT&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2023%2FWorkshop%2FSPIGM%2FAuthors%23your-submissions)
