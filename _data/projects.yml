@@ -1,3 +1,14 @@
+- id: pe_paper
+  title: "Lost or Liberated? A Dive into Bidirectional Transformer LMs Without Positional Encoding"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+  type: preprint
+  venue: "Preprint"
+  abstract: >
+    Recent studies have shown that Autoregressive Transformer Language Models (LMs) can generate text sequences without relying on positional encodings (PEs). This capability is attributed to the causal masks in these models, which prevent tokens from accessing information from future tokens, allowing implicit learning of token positions. On the other hand, Bidirectional LMs, such as BERT, tend to underperform on masked language modeling tasks when PEs are omitted. This performance dip arises because transformer layers are inherently permutation equivariant; without PEs or masks, they cannot differentiate token positions, making bidirectional processing difficult. In this analytical study, we examine a variant of bidirectional Transformer LM that operates without PEs but incorporates causal masks in its initial layers. Our findings reveal that this configuration yields performance metrics on masked language modeling tasks that are on par with traditional transformers that use PEs. However, when tested on the GLUE language understanding benchmark, the model without PEs exhibits diminished performance. These results highlight the importance of positional encodings in bidirectional LMs and indicate that pretraining loss might not always correlate with performance on downstream tasks.
+  paper: pe_paper.pdf
+
 - id: graph
   title: "An Autoregressive Text-to-Graph Framework for Joint Entity and Relation Extraction"
   authors:
