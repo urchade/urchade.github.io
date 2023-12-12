@@ -73,8 +73,8 @@
       website: https://lipn.univ-paris13.fr/~tomeh/
     - name: Thierry Charnois
       website: https://lipn.univ-paris13.fr/~charnois/
-  type: conference
-  venue: "Arabic Natural Language Processing Conference 2023"
+  type: workshop
+  venue: "Arabic Natural Language Processing Conference 2023 (co-located with EMNLP 2023)"
   abstract: >
     In this paper, we study the transferability of Named Entity Recognition (NER) models between Arabic dialects. This question is important because the available manually-annotated resources are not distributed equally across dialects: Modern Standard Arabic (MSA) is much richer than other dialects for which little to no datasets exist.How well does a NER model, trained on MSA, perform on other dialects? To answer this question, we construct four datasets. The first is an MSA dataset extracted from the ACE 2005 corpus. The others are datasets for Egyptian, Morocan and Syrian which we manually annotate following the ACE guidelines.We train a span-based NER model on top of a pretrained language model (PLM) encoder on the MSA data and study its performance on the other datasets in zero-shot settings.We study the performance of multiple PLM encoders from the literature and show that they achieve acceptable performance with no annotation effort.Our annotations and models are publicly available (\url{https://github.com/niamaelkhbir/Arabic-Cross-Dialectal-NER}).
   paper: assets/cross-dialect.pdf
