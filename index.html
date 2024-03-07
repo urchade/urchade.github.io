@@ -2,20 +2,17 @@
 layout: default
 title: "Urchade Zaratiana"
 ---
-
 <style>
     .card {
         margin-bottom: 1rem; /* Space between cards */
     }
 </style>
-
 <style>
 .clickable-element {
     color: #ef476f; /* Bootstrap secondary gray */
     cursor: pointer;
 }
 </style>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">Urchade Zaratiana &#x1F1F2;&#x1F1EC;</a>
@@ -40,16 +37,13 @@ title: "Urchade Zaratiana"
     </div>
   </div>
 </nav>
-
 <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #eaeaea;
             color: #333;
         }
-
         .profile {
             max-width: 800px;
             margin: 20px auto;
@@ -59,48 +53,42 @@ title: "Urchade Zaratiana"
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             line-height: 1.6;
         }
-
         .profile p {
             margin: 0 0 10px;
             text-align: justify;
         }
-
         strong {
             color: #007bff;
             font-weight: bold;
         }
-
         em {
             font-style: italic;
             color: #d63384;
         }
-
         @media (max-width: 820px) {
             .profile {
                 margin: 20px 10px;
             }
         }
     </style>
-
 <div class="container" id="home">
     <div class="row align-items-center my-5">
         <div class="col-md-4">
             <img class="img-fluid mx-auto d-block" src="assets/portrait.png" width="300">
         </div>
+        <div class="col-md-8">
+                <p class="text-justify">
                     <div class="profile">
                         <h1 class="mb-3">Urchade Zaratiana</h1>
                 <h4 class="mb-3 text-muted">PhD Student at LIPN</h4>
         <p>I am a PhD student at <strong>Laboratoire Informatique de Paris Nord (LIPN)</strong>, under the supervision of <strong>Nadi Tomeh</strong> and <strong>Thierry Charnois</strong>. My research focuses on <em>structured prediction for Natural Language Processing</em>.</p>
         <p>I am interested in the science of deep learning in general, including topics such as <em>domain generalization</em>, <em>zero/few-shot learning</em>, <em>instruction tuning</em>, <em>learning under noisy data/labels</em>, <em>scaling laws</em>, <em>intriguing phenomenons such as the 'double descent', the 'grokking mechanism' and the 'simplicity bias'</em>.</p>
-    </div>
+    </div>                </p>
+        </div>
     </div>
 </div>
-
-
-
 <div class="container py-5" id="research">
     <h2 class="mb-4">Research</h2>
-
     <!-- Conference Publications Section -->
     <h3 class="mb-4">Conference Publications</h3>
     <div class="accordion" id="conferencePublications">
@@ -112,7 +100,6 @@ title: "Urchade Zaratiana"
                     <div class="clickable-element" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
     {{ project.title }}
 </div>
-
                       <small class="text-muted">{{ project.venue }}</small>
                 </h5>
             </div>
@@ -152,7 +139,6 @@ title: "Urchade Zaratiana"
         {% endif %}
         {% endfor %}
     </div>
-
           <!-- Conference Publications Section -->
     <h3 class="mb-4  mt-5">Work in progress</h3>
     <div class="accordion" id="conferencePublications">
@@ -164,7 +150,6 @@ title: "Urchade Zaratiana"
                     <div class="clickable-element" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
     {{ project.title }}
 </div>
-
                       <small class="text-muted">{{ project.venue }}</small>
                 </h5>
             </div>
@@ -204,7 +189,6 @@ title: "Urchade Zaratiana"
         {% endif %}
         {% endfor %}
     </div>
-
     <!-- Workshop Publications Section -->
     <h3 class="mb-4  mt-5">Workshop Publications</h3>
     <div class="accordion" id="workshopPublications">
@@ -216,7 +200,6 @@ title: "Urchade Zaratiana"
                     <div class="clickable-element" data-toggle="collapse" data-target="#collapse{{ project.id }}" aria-expanded="false" aria-controls="collapse{{ project.id }}">
     {{ project.title }}
 </div>
-
                   <small class="text-muted">{{ project.venue }}</small>
                 </h5>
             </div>
@@ -257,9 +240,6 @@ title: "Urchade Zaratiana"
         {% endfor %}
     </div>
 </div>
-
-
-
 <div class="container py-5" id="contact">
     <h2 class="mb-4">Contact</h2>
     <ul class="list-unstyled">
@@ -289,4 +269,3 @@ title: "Urchade Zaratiana"
         </li>
     </ul>
 </div>
-
