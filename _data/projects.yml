@@ -1,3 +1,41 @@
+- id: grapher
+  title: "GraphER: A Structure-aware Text-to-Graph Model for Entity and Relation Extraction"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Nadi Tomeh
+      website: https://lipn.univ-paris13.fr/~tomeh/
+    - name: Niama El Khbir
+      website: https://niamaelkhbir.github.io
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Thierry Charnois
+      website: https://lipn.univ-paris13.fr/~charnois/
+  type: preprint
+  venue: "Preprint (2024)"
+  abstract: >
+    Information extraction (IE) is an important task in Natural Language Processing (NLP), involving the extraction of named entities and their relationships from unstructured text. In this paper, we propose a novel approach to this task by formulating it as graph structure learning (GSL). By formulating IE as GSL, we enhance the model's ability to dynamically refine and optimize the graph structure during the extraction process. This formulation allows for better interaction and structure-informed decisions for entity and relation prediction, in contrast to previous models that have separate or untied predictions for these tasks. When compared against state-of-the-art baselines on joint entity and relation extraction benchmarks, our model, GraphER, achieves competitive results.
+  paper: https://arxiv.org/abs/2404.12493
+  
+  - id: enrico
+  title: "EnriCo: Enriched Representation and Globally Constrained Inference for Entity and Relation Extraction"
+  authors:
+    - name: Urchade Zaratiana
+      website: urchade.github.io
+    - name: Nadi Tomeh
+      website: https://lipn.univ-paris13.fr/~tomeh/
+    - name: Yann Dauxais
+      website: https://scholar.google.fr/citations?user=MF8up2QAAAAJ&hl=fr
+    - name: Pierre Holat
+      website: https://lipn.univ-paris13.fr/~holat/research.html
+    - name: Thierry Charnois
+      website: https://lipn.univ-paris13.fr/~charnois/
+  type: preprint
+  venue: "Preprint (2024)"
+  abstract: >
+    Joint entity and relation extraction plays a pivotal role in various applications, notably in the construction of knowledge graphs. Despite recent progress, existing approaches often fall short in two key aspects: richness of representation and coherence in output structure. These models often rely on handcrafted heuristics for computing entity and relation representations, potentially leading to loss of crucial information. Furthermore, they disregard task and/or dataset-specific constraints, resulting in output structures that lack coherence. In our work, we introduce EnriCo, which mitigates these shortcomings. Firstly, to foster rich and expressive representation, our model leverage attention mechanisms that allow both entities and relations to dynamically determine the pertinent information required for accurate extraction. Secondly, we introduce a series of decoding algorithms designed to infer the highest scoring solutions while adhering to task and dataset-specific constraints, thus promoting structured and coherent outputs. Our model demonstrates competitive performance compared to baselines when evaluated on Joint IE datasets. 
+  paper: https://arxiv.org/abs/2404.12493
+  
 - id: gliner
   title: "GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer"
   authors:
