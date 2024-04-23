@@ -17,7 +17,7 @@
     Information extraction (IE) is an important task in Natural Language Processing (NLP), involving the extraction of named entities and their relationships from unstructured text. In this paper, we propose a novel approach to this task by formulating it as graph structure learning (GSL). By formulating IE as GSL, we enhance the model's ability to dynamically refine and optimize the graph structure during the extraction process. This formulation allows for better interaction and structure-informed decisions for entity and relation prediction, in contrast to previous models that have separate or untied predictions for these tasks. When compared against state-of-the-art baselines on joint entity and relation extraction benchmarks, our model, GraphER, achieves competitive results.
   paper: https://arxiv.org/abs/2404.12491
   
-  - id: enrico
+- id: enrico
   title: "EnriCo: Enriched Representation and Globally Constrained Inference for Entity and Relation Extraction"
   authors:
     - name: Urchade Zaratiana
