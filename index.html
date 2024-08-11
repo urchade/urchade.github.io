@@ -149,13 +149,26 @@ title: "Urchade Zaratiana"
 }
 
 .research-list {
-    padding-left: 20px;
-    margin-bottom: 25px;
+    padding-left: 0;
+    margin-bottom: 20px;
     list-style-type: none;
 }
 
 .research-list > li {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    border-left: 3px solid #007bff;
+    padding-left: 15px;
+    position: relative;
+}
+
+.research-list > li::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #007bff;
 }
 
 .research-list > li > strong {
@@ -165,38 +178,20 @@ title: "Urchade Zaratiana"
     margin-bottom: 8px;
 }
 
-.research-list > li ul {
-    padding-left: 25px;
-    margin-top: 5px;
-    background-color: #f9f9f9;
-    border-left: 3px solid #007bff;
-    padding: 10px;
-    border-radius: 8px;
+.research-list ul {
+    padding-left: 20px;
+    margin-top: 10px;
 }
 
-.research-list > li ul li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
+.research-list ul li {
+    margin-bottom: 8px;
     font-size: 15px;
-    line-height: 1.6;
     color: #555;
-}
-
-.research-list > li ul li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #007bff;
-    font-size: 18px;
-    line-height: 1;
 }
 
 .research-list a {
     color: #007bff;
     text-decoration: none;
-    font-weight: 500;
 }
 
 .research-list a:hover {
