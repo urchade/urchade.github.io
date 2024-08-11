@@ -140,45 +140,76 @@ title: "Urchade Zaratiana"
 </div>
 
 <div class="profile" id="projects">
-    <h5>Selected open source projects</h5>
+    <h2 class="section-title">Selected Open Source Projects</h2>
     <div class="project-info">
         <div class="project-item">
-            <a href="https://github.com/urchade/GLiNER" target="_blank"><strong>GLiNER</strong> (1.1k ⭐)</a>
-            <p>A lightweight model for Named Entity Recognition (NER) using a BERT-like transformer.</p>
+            <a href="https://github.com/urchade/GLiNER" target="_blank" class="project-link">
+                <strong>GLiNER</strong> <span class="stars">(1.1k ⭐)</span>
+            </a>
+            <p class="project-description">A lightweight model for Named Entity Recognition (NER) using a BERT-like transformer.</p>
         </div>
         <div class="project-item">
-            <a href="https://github.com/urchade/GraphER" target="_blank"><strong>GraphER</strong> (45 ⭐) </a>
-            <p>End-to-end zero-shot entity and relation extraction.</p>
+            <a href="https://github.com/urchade/GraphER" target="_blank" class="project-link">
+                <strong>GraphER</strong> <span class="stars">(45 ⭐)</span>
+            </a>
+            <p class="project-description">End-to-end zero-shot entity and relation extraction.</p>
         </div>
         <div class="project-item">
-            <a href="https://github.com/urchade/ATG" target="_blank"><strong>ATG</strong> (36 ⭐) </a>
-            <p>An autoregressive text-to-graph framework for joint entity and relation extraction.</p>
+            <a href="https://github.com/urchade/ATG" target="_blank" class="project-link">
+                <strong>ATG</strong> <span class="stars">(36 ⭐)</span>
+            </a>
+            <p class="project-description">An autoregressive text-to-graph framework for joint entity and relation extraction.</p>
         </div>
         <div class="project-item">
-            <a href="https://github.com/urchade/struct_ie" target="_blank"><strong>struct_ie</strong> (2⭐)</a>
-            <p>Structured Information Extraction with Large Language Models.</p>
+            <a href="https://github.com/urchade/struct_ie" target="_blank" class="project-link">
+                <strong>struct_ie</strong> <span class="stars">(2 ⭐)</span>
+            </a>
+            <p class="project-description">Structured Information Extraction with Large Language Models.</p>
         </div>
     </div>
 </div>
 
 <style>
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
     .project-info {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        padding: 0 20px;
     }
     .project-item {
-        display: flex;
-        flex-direction: column;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
     }
-    .project-item a {
+    .project-item:hover {
+        transform: translateY(-5px);
+    }
+    .project-link {
         font-size: 18px;
         color: #007bff;
         text-decoration: none;
+        display: inline-block;
+        margin-bottom: 8px;
     }
-    .project-item p {
-        margin: 5px 0 0 0;
+    .project-link:hover {
+        text-decoration: underline;
+    }
+    .stars {
         font-size: 14px;
+        color: #555;
+    }
+    .project-description {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
     }
 </style>
 
