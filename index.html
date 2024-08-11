@@ -140,55 +140,61 @@ title: "Urchade Zaratiana"
 </div>
 
 <style>
-.section-heading {
-    font-size: 22px;
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
+    .section-heading {
+        font-size: 22px;
+        color: #007bff;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+    }
+    
+    .research-list {
+        padding-left: 20px;
+        margin-bottom: 20px;
+        list-style-type: none;
+    }
 
-.research-list {
-    padding-left: 20px;
-    margin-bottom: 20px;
-    list-style-type: none;
-}
+    .research-list > li {
+        margin-bottom: 15px;
+    }
 
-.research-list > li {
-    margin-bottom: 15px;
-    padding-left: 15px;
-    position: relative;
-    border-left: 3px solid #007bff;
-}
+    .research-list > li > strong {
+        font-size: 18px;
+        color: #333;
+    }
 
-.research-list > li > strong {
-    font-size: 18px;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-}
+    .research-list > li ul {
+        padding-left: 20px;
+        margin-top: 5px;
+    }
 
-.research-list > li ul {
-    padding-left: 20px;
-    margin-top: 5px;
-    list-style-type: disc; /* Corrected: Only one bullet point now */
-}
+    .research-list > li ul li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #555;
+    }
 
-.research-list > li ul li {
-    margin-bottom: 8px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #555;
-}
+    .research-list > li ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #007bff;
+        font-size: 20px;
+        line-height: 1;
+    }
 
-.research-list a {
-    color: #007bff;
-    text-decoration: none;
-}
+    .research-list a {
+        color: #007bff;
+        text-decoration: none;
+    }
 
-.research-list a:hover {
-    text-decoration: underline;
-}
-
+    .research-list a:hover {
+        text-decoration: underline;
+    }
 </style>
 
 <div class="profile" id="projects">
