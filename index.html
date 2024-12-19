@@ -2,36 +2,71 @@
 layout: default
 title: "Urchade Zaratiana"
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>{{ page.title }}</title>
+<link rel="shortcut icon" href="assets/pacman.ico" type="image/x-icon">
 <style>
-    .card {
-        margin-bottom: 1rem; /* Space between cards */
-    }
-    .clickable-element {
-        color: #ef476f; /* Bootstrap secondary gray */
-        cursor: pointer;
-    }
+    /* 90s Retro Styling */
     body {
-        font-family: 'Roboto', sans-serif;
+        background: #000 url('assets/pacman_bg.gif') repeat;
+        font-family: "Courier New", monospace;
         margin: 0;
         padding: 0;
-        color: #333;
+        color: #00FF00;
     }
+    
+    a {
+        color: #FFFF00;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+        background: #000;
+        border-bottom: 3px solid #FF00FF;
+        padding: 10px;
+    }
+    .navbar-brand {
+        font-weight: bold;
+        color: #FFFF00 !important;
+        font-size: 24px;
+    }
+    .navbar-nav .nav-item .nav-link {
+        color: #FF00FF !important;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #00FFFF !important;
+    }
+    .collapse {
+        text-align: right;
+    }
+
     .profile {
         max-width: 850px;
         margin: 20px auto;
+        background: #111;
+        border: 3px solid #FF00FF;
+        border-radius: 0;
+        box-shadow: none;
         padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
+
     .intro-container {
         display: flex;
         align-items: flex-start;
     }
     .intro-container img {
         margin-right: 20px;
-        border-radius: 10px;
+        border: 3px dotted #FFFF00;
         flex-shrink: 0;
     }
     .intro-container p {
@@ -39,12 +74,14 @@ title: "Urchade Zaratiana"
         text-align: justify;
     }
     strong {
-        color: #007bff;
+        color: #FF00FF;
         font-weight: bold;
     }
     em {
         font-style: italic;
+        color: #00FFFF;
     }
+
     @media (max-width: 820px) {
         .intro-container {
             flex-direction: column;
@@ -55,17 +92,171 @@ title: "Urchade Zaratiana"
             margin-right: 0;
         }
     }
+
+    .section-heading {
+        font-size: 22px;
+        color: #FFFF00;
+        margin-bottom: 15px;
+        border-bottom: 2px dashed #FFFF00;
+        padding-bottom: 5px;
+    }
+
+    .research-list {
+        padding-left: 20px;
+        margin-bottom: 20px;
+        list-style-type: square;
+    }
+
+    .research-list > li {
+        margin-bottom: 15px;
+    }
+
+    .research-list > li > strong {
+        color: #FF00FF;
+    }
+
+    .research-list > li ul {
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+
+    .research-list > li ul li {
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        line-height: 1.6;
+        color: #00FF00;
+    }
+
+    .research-list a {
+        color: #FFFF00;
+        text-decoration: underline;
+    }
+
+    .research-list a:hover {
+        color: #00FFFF;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #FFFF00;
+        text-align: center;
+        border-bottom: 2px solid #FF00FF;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .project-item {
+        background-color: #222;
+        padding: 15px;
+        border: 2px dashed #00FFFF;
+        transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+        transform: scale(1.05);
+    }
+
+    .project-link {
+        font-size: 18px;
+        color: #FF00FF;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .project-link:hover {
+        color: #00FFFF;
+    }
+
+    .stars {
+        font-size: 14px;
+        color: #FFFF00;
+    }
+
+    .project-description {
+        margin: 0;
+        font-size: 14px;
+        color: #00FF00;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #111;
+        border: 3px solid #FF00FF;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #00FFFF;
+        font-weight: bold;
+    }
+    .contact-item i {
+        margin-right: 5px;
+    }
+
+    /* Retro header marquee */
+    header {
+        text-align: center;
+        background: #000;
+        color: #FF00FF;
+        border-bottom: 3px solid #FF00FF;
+        padding: 5px 0;
+    }
+
+    header .marquee-container {
+        background: #000;
+        color: #FF00FF;
+        font-weight: bold;
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    header .marquee-container marquee {
+        font-family: "Courier New", monospace;
+    }
+
+    footer {
+        background: #000;
+        color: #00FF00;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 3px solid #FF00FF;
+        font-size: 14px;
+    }
+
 </style>
+</head>
+<body>
+
+<header>
+  <div class="marquee-container">
+    <marquee scrollamount="6" direction="left">Welcome to Urchade Zaratiana's Retro-90s-Style Webpage! 🎉🚀👾</marquee>
+  </div>
+</header>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">Urchade Zaratiana &#x1F1F2;&#x1F1EC;</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler" type="button">[MENU]</button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -81,18 +272,19 @@ title: "Urchade Zaratiana"
 <div class="profile">
     <div class="intro-container">
         <img class="img-fluid" src="assets/portrait.png" width="195" alt="Portrait of Urchade Zaratiana">
-    <div  style="font-size: 15px;">
-    <p>
-        I am a PhD student at <em>Laboratoire Informatique de Paris Nord</em> (</em>LIPN</em>) 🏫, under the supervision of <em>Nadi Tomeh</em> and <em>Thierry Charnois</em>. My research focuses on <em>structured prediction for Natural Language Processing</em> 🧠📊.
-    </p>
-    <p>
-        I am also a <em>Member of Technical Staff</em> at <em>Fastino</em> 🦊🇺🇸, where I am leading the <em>Data structuring</em> team 🧠. I am currently based in <em>Île de la Réunion</em> 🇫🇷🇷🇪.
-    </p>
-    <p>
-    I am passionate about the science of deep learning, with particular interest in topics such as <em>domain generalization</em> 🌐, <em>zero/few-shot/instruction learning</em> 🛠️📚, <em>learning under noisy data/labels</em> 📉🔍, <em>scaling laws</em> 📈, and <em>simplicity bias</em> 🎛️.
-</p>
-</div>
+        <div style="font-size: 15px;">
+            <p>
+                I am a PhD student at <em>Laboratoire Informatique de Paris Nord</em> (</em>LIPN</em>) 🏫, under the supervision of <em>Nadi Tomeh</em> and <em>Thierry Charnois</em>. My research focuses on <em>structured prediction for Natural Language Processing</em> 🧠📊.
+            </p>
+            <p>
+                I am also a <em>Member of Technical Staff</em> at <em>Fastino</em> 🦊🇺🇸, where I am leading the <em>Data structuring</em> team 🧠. I am currently based in <em>Île de la Réunion</em> 🇫🇷🇷🇪.
+            </p>
+            <p>
+                I am passionate about the science of deep learning, with particular interest in topics such as <em>domain generalization</em> 🌐, <em>zero/few-shot/instruction learning</em> 🛠️📚, <em>learning under noisy data/labels</em> 📉🔍, <em>scaling laws</em> 📈, and <em>simplicity bias</em> 🎛️.
+            </p>
         </div>
+    </div>
+
     <div>
         <br>
         <p>During my PhD, I have worked on the following research problems:</p>
@@ -146,79 +338,24 @@ title: "Urchade Zaratiana"
     </div>
 </div>
 
-<style>
-    .section-heading {
-        font-size: 22px;
-        color: #007bff;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #007bff;
-        padding-bottom: 5px;
-    }
-    
-    .research-list {
-        padding-left: 20px;
-        margin-bottom: 20px;
-        list-style-type: none;
-    }
-
-    .research-list > li {
-        margin-bottom: 15px;
-    }
-
-    .research-list > li > strong {
-        color: #333;
-    }
-
-    .research-list > li ul {
-        padding-left: 20px;
-        margin-top: 5px;
-    }
-
-    .research-list > li ul li {
-        position: relative;
-        padding-left: 10px;
-        margin-bottom: 10px;
-        line-height: 1.6;
-        color: #555;
-    }
-
-    .research-list > li ul li::before {
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #007bff;
-        font-size: 20px;
-        line-height: 1;
-    }
-
-    .research-list a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    .research-list a:hover {
-        text-decoration: underline;
-    }
-</style>
-
 <div class="profile" id="projects">
     <h2 class="section-title">Selected OSS Projects</h2>
     <div class="project-info">
         <div class="project-item">
             <a href="https://github.com/urchade/GLiNER" target="_blank" class="project-link">
-                <strong>GLiNER</strong> <span class="stars">(1.1k ⭐)</span>
+                <strong>GLiNER</strong> <span class="stars">(1.5k ⭐)</span>
             </a>
             <p class="project-description">A lightweight model for Named Entity Recognition (NER) using a BERT-like transformer.</p>
         </div>
         <div class="project-item">
             <a href="https://github.com/urchade/GraphER" target="_blank" class="project-link">
-                <strong>GraphER</strong> <span class="stars">(45 ⭐)</span>
+                <strong>GraphER</strong> <span class="stars">(60 ⭐)</span>
             </a>
             <p class="project-description">End-to-end zero-shot entity and relation extraction.</p>
         </div>
         <div class="project-item">
             <a href="https://github.com/urchade/ATG" target="_blank" class="project-link">
-                <strong>ATG</strong> <span class="stars">(36 ⭐)</span>
+                <strong>ATG</strong> <span class="stars">(46 ⭐)</span>
             </a>
             <p class="project-description">An autoregressive text-to-graph framework for joint entity and relation extraction.</p>
         </div>
@@ -230,51 +367,6 @@ title: "Urchade Zaratiana"
         </div>
     </div>
 </div>
-
-<style>
-    .section-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: #333;
-        text-align: center;
-    }
-    .project-info {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 20px;
-    }
-    .project-item {
-        background-color: #f9f9f9;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-    .project-item:hover {
-        transform: translateY(-5px);
-    }
-    .project-link {
-        font-size: 18px;
-        color: #007bff;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 8px;
-    }
-    .project-link:hover {
-        text-decoration: underline;
-    }
-    .stars {
-        font-size: 14px;
-        color: #555;
-    }
-    .project-description {
-        margin: 0;
-        font-size: 14px;
-        color: #666;
-    }
-</style>
-
 
 <div class="profile" id="contact">
     <div class="contact-info">
@@ -297,21 +389,9 @@ title: "Urchade Zaratiana"
     </div>
 </div>
 
+<footer>
+    <p>© 2024 Urchade Zaratiana</p>
+</footer>
 
-<style>
-    .contact-info {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .contact-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-    .contact-item i {
-        margin-right: 5px;
-    }
-</style>
-
+</body>
+</html>
