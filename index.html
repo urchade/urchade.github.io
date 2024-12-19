@@ -8,17 +8,15 @@ title: "Urchade Zaratiana"
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>{{ page.title }}</title>
-<link rel="shortcut icon" href="assets/pacman.ico" type="image/x-icon">
 <style>
-    /* 90s Retro Styling */
     body {
-        background: #000 url('assets/pacman_bg.gif') repeat;
+        background: #000;
         font-family: "Courier New", monospace;
         margin: 0;
         padding: 0;
         color: #00FF00;
     }
-    
+
     a {
         color: #FFFF00;
         text-decoration: none;
@@ -27,24 +25,19 @@ title: "Urchade Zaratiana"
         text-decoration: underline;
     }
 
-    /* Navbar */
     .navbar {
         background: #000;
-        border-bottom: 3px solid #FF00FF;
         padding: 10px;
+        border-bottom: 1px solid #FF00FF;
     }
     .navbar-brand {
         font-weight: bold;
-        color: #FFFF00 !important;
-        font-size: 24px;
+        color: #FF00FF !important;
+        font-size: 20px;
     }
     .navbar-nav .nav-item .nav-link {
-        color: #FF00FF !important;
-        margin: 0 10px;
-        font-weight: bold;
-    }
-    .navbar-nav .nav-item .nav-link:hover {
         color: #00FFFF !important;
+        margin: 0 10px;
     }
     .collapse {
         text-align: right;
@@ -53,10 +46,8 @@ title: "Urchade Zaratiana"
     .profile {
         max-width: 850px;
         margin: 20px auto;
-        background: #111;
-        border: 3px solid #FF00FF;
-        border-radius: 0;
-        box-shadow: none;
+        background: #000;
+        border: 1px solid #FF00FF;
         padding: 20px;
     }
 
@@ -66,7 +57,7 @@ title: "Urchade Zaratiana"
     }
     .intro-container img {
         margin-right: 20px;
-        border: 3px dotted #FFFF00;
+        border: 1px solid #FFFF00;
         flex-shrink: 0;
     }
     .intro-container p {
@@ -93,12 +84,12 @@ title: "Urchade Zaratiana"
         }
     }
 
-    .section-heading {
-        font-size: 22px;
+    .section-heading, .section-title {
+        font-size: 20px;
         color: #FFFF00;
-        margin-bottom: 15px;
-        border-bottom: 2px dashed #FFFF00;
+        border-bottom: 1px dashed #FFFF00;
         padding-bottom: 5px;
+        margin-bottom: 15px;
     }
 
     .research-list {
@@ -106,20 +97,16 @@ title: "Urchade Zaratiana"
         margin-bottom: 20px;
         list-style-type: square;
     }
-
     .research-list > li {
         margin-bottom: 15px;
     }
-
     .research-list > li > strong {
         color: #FF00FF;
     }
-
     .research-list > li ul {
         padding-left: 20px;
         margin-top: 5px;
     }
-
     .research-list > li ul li {
         position: relative;
         padding-left: 10px;
@@ -128,58 +115,28 @@ title: "Urchade Zaratiana"
         color: #00FF00;
     }
 
-    .research-list a {
-        color: #FFFF00;
-        text-decoration: underline;
-    }
-
-    .research-list a:hover {
-        color: #00FFFF;
-    }
-
-    .section-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: #FFFF00;
-        text-align: center;
-        border-bottom: 2px solid #FF00FF;
-    }
-
     .project-info {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 0 20px;
     }
-
     .project-item {
-        background-color: #222;
+        background-color: #000;
         padding: 15px;
-        border: 2px dashed #00FFFF;
-        transition: transform 0.3s ease;
+        border: 1px dashed #00FFFF;
     }
-
-    .project-item:hover {
-        transform: scale(1.05);
-    }
-
     .project-link {
-        font-size: 18px;
+        font-size: 16px;
         color: #FF00FF;
         text-decoration: none;
         display: inline-block;
         margin-bottom: 8px;
     }
-
-    .project-link:hover {
-        color: #00FFFF;
-    }
-
     .stars {
         font-size: 14px;
         color: #FFFF00;
     }
-
     .project-description {
         margin: 0;
         font-size: 14px;
@@ -191,43 +148,19 @@ title: "Urchade Zaratiana"
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        background: #111;
-        border: 3px solid #FF00FF;
+        background: #000;
+        border: 1px solid #FF00FF;
         padding: 20px;
         margin-top: 20px;
     }
-
     .contact-item {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
         color: #00FFFF;
-        font-weight: bold;
     }
     .contact-item i {
         margin-right: 5px;
-    }
-
-    /* Retro header marquee */
-    header {
-        text-align: center;
-        background: #000;
-        color: #FF00FF;
-        border-bottom: 3px solid #FF00FF;
-        padding: 5px 0;
-    }
-
-    header .marquee-container {
-        background: #000;
-        color: #FF00FF;
-        font-weight: bold;
-        font-size: 16px;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    header .marquee-container marquee {
-        font-family: "Courier New", monospace;
     }
 
     footer {
@@ -235,19 +168,12 @@ title: "Urchade Zaratiana"
         color: #00FF00;
         text-align: center;
         padding: 10px 0;
-        border-top: 3px solid #FF00FF;
+        border-top: 1px solid #FF00FF;
         font-size: 14px;
     }
-
 </style>
 </head>
 <body>
-
-<header>
-  <div class="marquee-container">
-    <marquee scrollamount="6" direction="left">Welcome to Urchade Zaratiana's Retro-90s-Style Webpage! 🎉🚀👾</marquee>
-  </div>
-</header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container">
@@ -272,7 +198,7 @@ title: "Urchade Zaratiana"
 <div class="profile">
     <div class="intro-container">
         <img class="img-fluid" src="assets/portrait.png" width="195" alt="Portrait of Urchade Zaratiana">
-        <div style="font-size: 15px;">
+        <div style="font-size: 14px;">
             <p>
                 I am a PhD student at <em>Laboratoire Informatique de Paris Nord</em> (</em>LIPN</em>) 🏫, under the supervision of <em>Nadi Tomeh</em> and <em>Thierry Charnois</em>. My research focuses on <em>structured prediction for Natural Language Processing</em> 🧠📊.
             </p>
@@ -280,14 +206,14 @@ title: "Urchade Zaratiana"
                 I am also a <em>Member of Technical Staff</em> at <em>Fastino</em> 🦊🇺🇸, where I am leading the <em>Data structuring</em> team 🧠. I am currently based in <em>Île de la Réunion</em> 🇫🇷🇷🇪.
             </p>
             <p>
-                I am passionate about the science of deep learning, with particular interest in topics such as <em>domain generalization</em> 🌐, <em>zero/few-shot/instruction learning</em> 🛠️📚, <em>learning under noisy data/labels</em> 📉🔍, <em>scaling laws</em> 📈, and <em>simplicity bias</em> 🎛️.
+                I am passionate about deep learning, with interests in <em>domain generalization</em> 🌐, <em>zero/few-shot/instruction learning</em> 🛠️📚, <em>learning under noisy data</em> 📉🔍, <em>scaling laws</em> 📈, and <em>simplicity bias</em> 🎛️.
             </p>
         </div>
     </div>
 
     <div>
         <br>
-        <p>During my PhD, I have worked on the following research problems:</p>
+        <p class="section-heading">Research</p>
         <ul class="research-list">
             <li><strong>Structured decoding (2021-)</strong><br>
                 <ul>
@@ -298,7 +224,7 @@ title: "Urchade Zaratiana"
             <li><strong>Graph (structure) learning (2021-)</strong><br>
                 <ul>
                     <li>GraphER: End-to-end graph structure learning of joint entity and relation extraction (Zaratiana et al., ArXiv 2024) (<a href="https://arxiv.org/html/2404.12491v1">Link</a>)</li>
-                    <li>GNNer: using graph (and Graph Neural Network) to implicitly constrain the output of neural network (Zaratiana et al., ACL 2022 SRW) (<a href="https://aclanthology.org/2022.acl-srw.9/">Link</a>)</li>
+                    <li>GNNer: using graph (and Graph Neural Network) to implicitly constrain outputs (Zaratiana et al., ACL 2022 SRW) (<a href="https://aclanthology.org/2022.acl-srw.9/">Link</a>)</li>
                 </ul>
             </li>
             <li><strong>Structured loss functions (2022-)</strong><br>
@@ -309,29 +235,29 @@ title: "Urchade Zaratiana"
             </li>
             <li><strong>Constrained decoding of language model (2022-)</strong><br>
                 <ul>
-                <li>Autoregressive text to graph model for Information extraction: preliminary version published at ICML 2023 workshop (Zaratiana et al., ICML 2023 SPIGM) (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>), and final version at AAAI 2024 (Zaratiana et al., AAAI 2024) (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/29919">Link</a>)</li>
+                    <li>Autoregressive text to graph model (Zaratiana et al., AAAI 2024) (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/29919">Link</a>)</li>
                 </ul>
             </li>
             <li><strong>Zero-shot Learning for Information Extraction (2023-)</strong><br>
                 <ul>
-                    <li>GLiNER (Zaratiana et al., NAACL 2024): A model designed for Zero-shot Named Entity Recognition (<a href="https://github.com/urchade/GLiNER">GitHub</a>).</li>
-                    <li>GraphER (Zaratiana et al., ArXiv 2024): An end-to-end model for zero-shot joint entity and relation extraction (<a href="https://github.com/urchade/GLiNER">GitHub</a>).</li>
+                    <li>GLiNER (NAACL 2024): Zero-shot NER (<a href="https://github.com/urchade/GLiNER">GitHub</a>)</li>
+                    <li>GraphER (ArXiv 2024): Zero-shot joint extraction (<a href="https://github.com/urchade/GLiNER">GitHub</a>)</li>
                 </ul>
             </li>
             <li><strong>Arabic Information Extraction (2023-)</strong><br>
                 <ul>
-                    <li>Cross-Dialectal Named Entity Recognition in Arabic (El Khbir et al., ArabNLP 2023) (<a href="https://aclanthology.org/2023.arabicnlp-1.12/">Link</a>)</li>
-                    <li>A Span-Based Approach for Flat and Nested Arabic Named Entity Recognition: Top 1 system at Wojood NER shared task (El Khbir et al., ArabNLP 2023) (<a href="https://aclanthology.org/2023.arabicnlp-1.89/">Link</a>)</li>
+                    <li>Cross-Dialectal NER in Arabic (ArabNLP 2023) (<a href="https://aclanthology.org/2023.arabicnlp-1.12/">Link</a>)</li>
+                    <li>Top 1 system at Wojood NER shared task (ArabNLP 2023) (<a href="https://aclanthology.org/2023.arabicnlp-1.89/">Link</a>)</li>
                 </ul>
             </li>
             <li><strong>Language model pretraining (2024-)</strong><br>
                 <ul>
-                    <li>Training a BERT-like model without positional encoding (Zaratiana et al., ICLR 2024 Tiny Paper) (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>)</li>
+                    <li>Training a BERT-like model without positional encoding (ICLR 2024 Tiny Paper) (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>)</li>
                 </ul>
             </li>
-            <li><strong>Detection of machine-generated text (2024-)</strong><br>
+            <li><strong>Machine-generated text detection (2024-)</strong><br>
                 <ul>
-                <li>Our system ranked top 2 at SemEval "Multidomain, Multimodal and Multilingual Machine-Generated Text Detection" shared task using a 300M parameters model. Top 1 used a 70b model. (Ben Fares et al., SemEval 2024) (<a href="https://aclanthology.org/2024.semeval-1.170/">Link</a>)</li>
+                    <li>Top 2 at SemEval MGT Detection (Ben Fares et al., SemEval 2024) (<a href="https://aclanthology.org/2024.semeval-1.170/">Link</a>)</li>
                 </ul>
             </li>
         </ul>
@@ -339,13 +265,13 @@ title: "Urchade Zaratiana"
 </div>
 
 <div class="profile" id="projects">
-    <h2 class="section-title">Selected OSS Projects</h2>
+    <p class="section-title">Selected OSS Projects</p>
     <div class="project-info">
         <div class="project-item">
             <a href="https://github.com/urchade/GLiNER" target="_blank" class="project-link">
                 <strong>GLiNER</strong> <span class="stars">(1.5k ⭐)</span>
             </a>
-            <p class="project-description">A lightweight model for Named Entity Recognition (NER) using a BERT-like transformer.</p>
+            <p class="project-description">A lightweight model for NER using BERT-like transformers.</p>
         </div>
         <div class="project-item">
             <a href="https://github.com/urchade/GraphER" target="_blank" class="project-link">
@@ -357,13 +283,13 @@ title: "Urchade Zaratiana"
             <a href="https://github.com/urchade/ATG" target="_blank" class="project-link">
                 <strong>ATG</strong> <span class="stars">(46 ⭐)</span>
             </a>
-            <p class="project-description">An autoregressive text-to-graph framework for joint entity and relation extraction.</p>
+            <p class="project-description">Autoregressive text-to-graph for joint extraction.</p>
         </div>
         <div class="project-item">
             <a href="https://github.com/urchade/struct_ie" target="_blank" class="project-link">
                 <strong>struct_ie</strong> <span class="stars">(2 ⭐)</span>
             </a>
-            <p class="project-description">Structured Information Extraction with Large Language Models.</p>
+            <p class="project-description">Structured IE with Large Language Models.</p>
         </div>
     </div>
 </div>
