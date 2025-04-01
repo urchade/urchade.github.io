@@ -10,8 +10,7 @@ title: "Urchade Zaratiana"
 <title>{{ page.title }}</title>
 <link rel="shortcut icon" href="assets/pacman.ico" type="image/x-icon">
 <style>
-    /* A more sober/classic styling on a white background */
-
+    /* Overall Sober/Classic Styling on White Background */
     body {
         background-color: #ffffff;
         font-family: Arial, sans-serif;
@@ -20,7 +19,6 @@ title: "Urchade Zaratiana"
         color: #333333;
         line-height: 1.6;
     }
-
     a {
         color: #007bff;
         text-decoration: none;
@@ -49,11 +47,11 @@ title: "Urchade Zaratiana"
     .navbar-nav .nav-item .nav-link:hover {
         color: #007bff !important;
     }
-
     .collapse {
         text-align: right;
     }
 
+    /* Profile Section */
     .profile {
         max-width: 850px;
         margin: 20px auto;
@@ -62,7 +60,6 @@ title: "Urchade Zaratiana"
         border-radius: 4px;
         padding: 20px;
     }
-
     .intro-container {
         display: flex;
         align-items: flex-start;
@@ -76,7 +73,6 @@ title: "Urchade Zaratiana"
         margin: 0 0 10px;
         text-align: justify;
     }
-
     @media (max-width: 820px) {
         .intro-container {
             flex-direction: column;
@@ -87,7 +83,6 @@ title: "Urchade Zaratiana"
             margin-right: 0;
         }
     }
-
     strong {
         font-weight: bold;
         color: #000000;
@@ -96,7 +91,6 @@ title: "Urchade Zaratiana"
         font-style: italic;
         color: #666666;
     }
-
     .section-heading {
         font-size: 18px;
         color: #000000;
@@ -104,34 +98,6 @@ title: "Urchade Zaratiana"
         border-bottom: 1px solid #cccccc;
         padding-bottom: 5px;
     }
-
-    .research-list {
-        padding-left: 20px;
-        margin-bottom: 20px;
-        list-style-type: disc;
-    }
-    .research-list > li {
-        margin-bottom: 15px;
-    }
-    .research-list > li ul {
-        padding-left: 20px;
-        margin-top: 5px;
-    }
-    .research-list > li ul li {
-        position: relative;
-        padding-left: 10px;
-        margin-bottom: 10px;
-        line-height: 1.6;
-        color: #333333;
-    }
-    .research-list a {
-        color: #007bff;
-        text-decoration: none;
-    }
-    .research-list a:hover {
-        text-decoration: underline;
-    }
-
     .section-title {
         font-size: 22px;
         margin-bottom: 20px;
@@ -141,13 +107,13 @@ title: "Urchade Zaratiana"
         padding-bottom: 10px;
     }
 
+    /* Project Section */
     .project-info {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 0 20px;
     }
-
     .project-item {
         background-color: #fafafa;
         padding: 15px;
@@ -155,11 +121,9 @@ title: "Urchade Zaratiana"
         transition: transform 0.2s ease;
         border-radius: 3px;
     }
-
     .project-item:hover {
         transform: scale(1.01);
     }
-
     .project-link {
         font-size: 16px;
         color: #007bff;
@@ -168,19 +132,18 @@ title: "Urchade Zaratiana"
         margin-bottom: 8px;
         font-weight: bold;
     }
-
     .stars {
         font-size: 14px;
         color: #666666;
         margin-left: 5px;
     }
-
     .project-description {
         margin: 0;
         font-size: 14px;
         color: #333333;
     }
 
+    /* Contact Section */
     .contact-info {
         display: flex;
         justify-content: space-around;
@@ -192,7 +155,6 @@ title: "Urchade Zaratiana"
         padding: 20px;
         margin-top: 20px;
     }
-
     .contact-item {
         display: flex;
         align-items: center;
@@ -204,6 +166,7 @@ title: "Urchade Zaratiana"
         margin-right: 5px;
     }
 
+    /* Header & Footer */
     header {
         text-align: center;
         background: #f8f9fa;
@@ -211,7 +174,6 @@ title: "Urchade Zaratiana"
         border-bottom: 1px solid #dddddd;
         padding: 10px 0;
     }
-
     footer {
         background: #f8f9fa;
         color: #666666;
@@ -220,6 +182,39 @@ title: "Urchade Zaratiana"
         border-top: 1px solid #dddddd;
         font-size: 14px;
         margin-top: 20px;
+    }
+
+    /* Research Cards Styling */
+    .research-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .research-card {
+        background-color: #fafafa;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        padding: 15px;
+        flex: 1 1 calc(50% - 20px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .research-card h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: #333333;
+    }
+    .research-card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555555;
+        line-height: 1.4;
+    }
+    .research-card a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .research-card a:hover {
+        text-decoration: underline;
     }
 </style>
 </head>
@@ -265,56 +260,93 @@ title: "Urchade Zaratiana"
         </div>
     </div>
 
-    <div>
-        <br>
-        <p>During my PhD, I have worked on the following research problems:</p>
-        <ul class="research-list">
-            <li><strong>Structured decoding (2021-)</strong><br>
-                <ul>
-                    <li>Named Entity Recognition as Structured Span Prediction (Zaratiana et al., EMNLP 2022 UM-IoS) (<a href="https://aclanthology.org/2022.umios-1.1/">Link</a>)</li>
-                    <li>EnriCO: Constrained decoding of information extraction using logical rules. (Zaratiana et al., ArXiv 2024) (<a href="https://arxiv.org/abs/2404.12493">Link</a>)</li>
-                </ul>
-            </li>
-            <li><strong>Graph (structure) learning (2021-)</strong><br>
-                <ul>
-                    <li>GraphER: End-to-end graph structure learning of joint entity and relation extraction (Zaratiana et al., ArXiv 2024) (<a href="https://arxiv.org/html/2404.12491v1">Link</a>)</li>
-                    <li>GNNer: using graph (and Graph Neural Network) to implicitly constrain the output of neural network (Zaratiana et al., ACL 2022 SRW) (<a href="https://aclanthology.org/2022.acl-srw.9/">Link</a>)</li>
-                </ul>
-            </li>
-            <li><strong>Structured loss functions (2022-)</strong><br>
-                <ul>
-                    <li>Filtered Semi-Markov CRF (Zaratiana et al., EMNLP 2023) (<a href="https://aclanthology.org/2023.findings-emnlp.17/">Link</a>)</li>
-                    <li>Global Span Selection (Zaratiana et al., EMNLP 2022 UM-IoS) (<a href="https://aclanthology.org/2022.umios-1.2/">Link</a>)</li>
-                </ul>
-            </li>
-            <li><strong>Constrained decoding of language model (2022-)</strong><br>
-                <ul>
-                <li>Autoregressive text to graph model for Information extraction: preliminary version published at ICML 2023 workshop (Zaratiana et al., ICML 2023 SPIGM) (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>), and final version at AAAI 2024 (Zaratiana et al., AAAI 2024) (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/29919">Link</a>)</li>
-                </ul>
-            </li>
-            <li><strong>Zero-shot Learning for Information Extraction (2023-)</strong><br>
-                <ul>
-                    <li>GLiNER (Zaratiana et al., NAACL 2024): A model designed for Zero-shot Named Entity Recognition (<a href="https://github.com/urchade/GLiNER">GitHub</a>).</li>
-                    <li>GraphER (Zaratiana et al., ArXiv 2024): An end-to-end model for zero-shot joint entity and relation extraction (<a href="https://github.com/urchade/GLiNER">GitHub</a>).</li>
-                </ul>
-            </li>
-            <li><strong>Arabic Information Extraction (2023-)</strong><br>
-                <ul>
-                    <li>Cross-Dialectal Named Entity Recognition in Arabic (El Khbir et al., ArabNLP 2023) (<a href="https://aclanthology.org/2023.arabicnlp-1.12/">Link</a>)</li>
-                    <li>A Span-Based Approach for Flat and Nested Arabic Named Entity Recognition: Top 1 system at Wojood NER shared task (El Khbir et al., ArabNLP 2023) (<a href="https://aclanthology.org/2023.arabicnlp-1.89/">Link</a>)</li>
-                </ul>
-            </li>
-            <li><strong>Language model pretraining (2024-)</strong><br>
-                <ul>
-                    <li>Training a BERT-like model without positional encoding (Zaratiana et al., ICLR 2024 Tiny Paper) (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>)</li>
-                </ul>
-            </li>
-            <li><strong>Detection of machine-generated text (2024-)</strong><br>
-                <ul>
-                <li>Our system ranked top 2 at SemEval "Multidomain, Multimodal and Multilingual Machine-Generated Text Detection" shared task using a 300M parameters model. Top 1 used a 70b model. (Ben Fares et al., SemEval 2024) (<a href="https://aclanthology.org/2024.semeval-1.170/">Link</a>)</li>
-                </ul>
-            </li>
-        </ul>
+    <!-- Elegant Research Problems Section -->
+    <div style="margin-top: 20px;">
+      <p style="font-size: 16px; margin-bottom: 15px;">
+        During my PhD, I have worked on the following research problems:
+      </p>
+      <div class="research-container">
+        <div class="research-card">
+          <h3>Structured decoding <span style="font-weight: normal; font-size: 14px;">(2021-)</span></h3>
+          <p>
+            Named Entity Recognition as Structured Span Prediction (Zaratiana et al., EMNLP 2022 UM-IoS)
+            (<a href="https://aclanthology.org/2022.umios-1.1/">Link</a>)
+          </p>
+          <p>
+            EnriCO: Constrained decoding of information extraction using logical rules (Zaratiana et al., ArXiv 2024)
+            (<a href="https://arxiv.org/abs/2404.12493">Link</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Graph (structure) learning <span style="font-weight: normal; font-size: 14px;">(2021-)</span></h3>
+          <p>
+            GraphER: End-to-end graph structure learning of joint entity and relation extraction (Zaratiana et al., ArXiv 2024)
+            (<a href="https://arxiv.org/html/2404.12491v1">Link</a>)
+          </p>
+          <p>
+            GNNer: Using graph (and Graph Neural Network) to implicitly constrain the output of neural network (Zaratiana et al., ACL 2022 SRW)
+            (<a href="https://aclanthology.org/2022.acl-srw.9/">Link</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Structured loss functions <span style="font-weight: normal; font-size: 14px;">(2022-)</span></h3>
+          <p>
+            Filtered Semi-Markov CRF (Zaratiana et al., EMNLP 2023)
+            (<a href="https://aclanthology.org/2023.findings-emnlp.17/">Link</a>)
+          </p>
+          <p>
+            Global Span Selection (Zaratiana et al., EMNLP 2022 UM-IoS)
+            (<a href="https://aclanthology.org/2022.umios-1.2/">Link</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Constrained decoding of language model <span style="font-weight: normal; font-size: 14px;">(2022-)</span></h3>
+          <p>
+            Autoregressive text-to-graph model for Information extraction: preliminary version at ICML 2023 workshop (Zaratiana et al., ICML 2023 SPIGM)
+            (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>)
+          </p>
+          <p>
+            Final version at AAAI 2024 (Zaratiana et al., AAAI 2024)
+            (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/29919">Link</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Zero-shot Learning for Information Extraction <span style="font-weight: normal; font-size: 14px;">(2023-)</span></h3>
+          <p>
+            GLiNER (Zaratiana et al., NAACL 2024): A model designed for Zero-shot Named Entity Recognition
+            (<a href="https://github.com/urchade/GLiNER">GitHub</a>)
+          </p>
+          <p>
+            GraphER (Zaratiana et al., ArXiv 2024): An end-to-end model for zero-shot joint entity and relation extraction
+            (<a href="https://github.com/urchade/GLiNER">GitHub</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Arabic Information Extraction <span style="font-weight: normal; font-size: 14px;">(2023-)</span></h3>
+          <p>
+            Cross-Dialectal Named Entity Recognition in Arabic (El Khbir et al., ArabNLP 2023)
+            (<a href="https://aclanthology.org/2023.arabicnlp-1.12/">Link</a>)
+          </p>
+          <p>
+            A Span-Based Approach for Flat and Nested Arabic Named Entity Recognition: Top 1 system at Wojood NER shared task (El Khbir et al., ArabNLP 2023)
+            (<a href="https://aclanthology.org/2023.arabicnlp-1.89/">Link</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Language model pretraining <span style="font-weight: normal; font-size: 14px;">(2024-)</span></h3>
+          <p>
+            Training a BERT-like model without positional encoding (Zaratiana et al., ICLR 2024 Tiny Paper)
+            (<a href="https://openreview.net/forum?id=5sLIuaW5wT">Link</a>)
+          </p>
+        </div>
+        <div class="research-card">
+          <h3>Detection of machine-generated text <span style="font-weight: normal; font-size: 14px;">(2024-)</span></h3>
+          <p>
+            Our system ranked top 2 at SemEval "Multidomain, Multimodal and Multilingual Machine-Generated Text Detection" shared task using a 300M parameters model
+            (<a href="https://aclanthology.org/2024.semeval-1.170/">Link</a>)
+          </p>
+        </div>
+      </div>
     </div>
 </div>
 
@@ -370,7 +402,7 @@ title: "Urchade Zaratiana"
 </div>
 
 <footer>
-    <p>© 2024 Urchade Zaratiana</p>
+    <p>© 2025 Urchade Zaratiana</p>
 </footer>
 
 </body>
