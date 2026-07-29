@@ -760,7 +760,9 @@
       </div>
       <p class="adoption-intro">
         Public download counts provide a rough view of how GLiNER is being used.
-        They measure file requests rather than unique users.
+        The Hugging Face figures cover the full public ecosystem of models tagged
+        <code>gliner</code> or <code>gliner2</code>, not only models published by the original authors.
+        Counts measure file requests rather than unique users.
       </p>
       <div class="adoption-summary">
         <div>
@@ -768,8 +770,8 @@
           <span>PyPI package downloads · last 30 days</span>
         </div>
         <div>
-          <strong>358k</strong>
-          <span>Hugging Face model downloads · GLiNER family, current 30-day window</span>
+          <strong>4.01M</strong>
+          <span>Hugging Face downloads · 497 tagged models, current 30-day window</span>
         </div>
       </div>
       <div class="chart-grid">
@@ -794,21 +796,21 @@
         </figure>
 
         <figure class="download-chart huggingface">
-          <h3>Hugging Face downloads</h3>
-          <p class="chart-subtitle">Cumulative downloads of <code>gliner_multi-v2.1</code></p>
-          <div class="bar-chart" style="--columns: 5" role="img" aria-label="Cumulative Hugging Face downloads for gliner multi version 2.1: 298 thousand in January 2025, 357 thousand in June 2025, 493 thousand in October 2025, 512 thousand in December 2025, and 834 thousand in July 2026.">
-            <div class="bar-column"><span class="bar-value">298k</span><div class="bar-track"><span class="bar" style="height: 36%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">357k</span><div class="bar-track"><span class="bar" style="height: 43%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">493k</span><div class="bar-track"><span class="bar" style="height: 59%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">512k</span><div class="bar-track"><span class="bar" style="height: 61%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">834k</span><div class="bar-track"><span class="bar" style="height: 100%"></span></div></div>
+          <h3>Hugging Face ecosystem</h3>
+          <p class="chart-subtitle">Downloads across every public model carrying either tag</p>
+          <div class="bar-chart" style="--columns: 3" role="img" aria-label="Hugging Face downloads in the current 30-day window: 2.79 million across 458 models tagged gliner, 1.23 million across 80 models tagged gliner2, and 4.01 million across the deduplicated union of 497 models.">
+            <div class="bar-column"><span class="bar-value">2.79M</span><div class="bar-track"><span class="bar" style="height: 70%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">1.23M</span><div class="bar-track"><span class="bar" style="height: 31%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">4.01M</span><div class="bar-track"><span class="bar" style="height: 100%"></span></div></div>
           </div>
-          <div class="bar-labels" style="--columns: 5" aria-hidden="true">
-            <span>Jan ’25</span><span>Jun ’25</span><span>Oct ’25</span><span>Dec ’25</span><span>Jul ’26</span>
+          <div class="bar-labels" style="--columns: 3" aria-hidden="true">
+            <span>GLiNER<br>458 models</span><span>GLiNER2<br>80 models</span><span>Unique<br>497 models</span>
           </div>
           <figcaption>
-            Historical public snapshots and current Hub counter.
-            Source: <a href="https://huggingface.co/urchade/gliner_multi-v2.1">Hugging Face</a>.
+            Current 30-day download counters. The combined total deduplicates the
+            41 models carrying both tags. Sources:
+            <a href="https://huggingface.co/models?other=gliner">GLiNER models</a> and
+            <a href="https://huggingface.co/models?other=gliner2">GLiNER2 models</a>.
           </figcaption>
         </figure>
       </div>
