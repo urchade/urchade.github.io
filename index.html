@@ -311,11 +311,15 @@
 
     .repository-link { font-size: .73rem; }
 
-    .adoption-intro {
-      max-width: 730px;
+    .impact-note {
       margin: -12px 0 30px;
-      color: var(--muted);
-      font-size: .84rem;
+      padding: 22px 24px;
+      border-left: 3px solid var(--blue);
+      background: var(--wash);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1rem;
+      line-height: 1.65;
     }
 
     .adoption-summary {
@@ -758,13 +762,14 @@
         <h2>GLiNER adoption</h2>
         <span class="chart-subtitle">Updated 29 July 2026</span>
       </div>
-      <p class="adoption-intro">
-        The GLiNER family of models has been widely adopted across research and
-        industry. Public integrations and reported production use include
-        <a href="https://docs.nvidia.com/nemo/guardrails/latest/configure-guardrails/guardrail-catalog/third-party/gliner">NVIDIA</a>,
-        <a href="https://www.prnewswire.com/news-releases/fastino-labs-creator-of-gliner-releases-two-state-of-the-art-language-models-1-000x-smaller-than-frontier-302772349.html">Meta</a>,
-        <a href="https://www.prnewswire.com/news-releases/fastino-labs-creator-of-gliner-releases-two-state-of-the-art-language-models-1-000x-smaller-than-frontier-302772349.html">Airbnb</a>,
-        and <a href="https://github.com/microsoft/presidio/blob/main/CHANGELOG.md">Microsoft</a>.
+      <p class="impact-note">
+        The GLiNER family has become a widely used open-source foundation for
+        efficient information extraction, bridging research and production. Its
+        compact encoder-based models make zero-shot entity recognition, relation
+        extraction, classification, and structured extraction practical without
+        relying on large generative models. The growing ecosystem now spans hundreds
+        of community models and millions of monthly downloads across PyPI and
+        Hugging Face.
       </p>
       <div class="adoption-summary">
         <div>
