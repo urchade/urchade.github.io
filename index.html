@@ -559,6 +559,472 @@
       .section-title { align-items: flex-start; flex-direction: column; gap: 7px; }
       .award { grid-template-columns: 1fr; }
     }
+
+    /* Editorial identity: Malagasy earth, indigo and woven geometry */
+    :root {
+      --ink: #28241f;
+      --navy: #193b43;
+      --blue: #9d4633;
+      --earth: #9d4633;
+      --gold: #c69a4b;
+      --muted: #6f6960;
+      --line: #d9d0c3;
+      --paper: #faf7ef;
+      --wash: #f1eadf;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    }
+
+    body {
+      border-top: 0;
+      background:
+        linear-gradient(rgba(250, 247, 239, .96), rgba(250, 247, 239, .96)),
+        repeating-linear-gradient(90deg, transparent 0 31px, rgba(157, 70, 51, .04) 31px 32px);
+    }
+
+    body::before {
+      content: "";
+      display: block;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--earth) 0 28px,
+        var(--gold) 28px 36px,
+        var(--navy) 36px 64px,
+        var(--paper) 64px 72px
+      );
+    }
+
+    ::selection { background: #ead5bd; }
+
+    .container,
+    .site-header {
+      width: min(1120px, calc(100% - 56px));
+    }
+
+    .site-header {
+      min-height: 74px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(250, 247, 239, .96);
+      border-bottom-color: rgba(25, 59, 67, .18);
+      backdrop-filter: blur(12px);
+    }
+
+    .site-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-size: 1.08rem;
+      letter-spacing: -.015em;
+    }
+
+    .site-name::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background:
+        linear-gradient(45deg, transparent 38%, var(--gold) 39% 61%, transparent 62%),
+        linear-gradient(-45deg, transparent 38%, var(--earth) 39% 61%, transparent 62%);
+      border: 1px solid var(--navy);
+      transform: rotate(45deg);
+    }
+
+    .site-header nav {
+      gap: 28px;
+      font-size: .7rem;
+      font-weight: 650;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .site-header nav a {
+      position: relative;
+      color: #58534c;
+    }
+
+    .site-header nav a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+      height: 2px;
+      background: var(--earth);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .18s ease;
+    }
+
+    .site-header nav a:hover::after { transform: scaleX(1); }
+
+    .intro {
+      min-height: 590px;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 88px;
+      align-items: center;
+      padding-block: 78px 72px;
+      position: relative;
+    }
+
+    .intro::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--earth) 0 11%, var(--gold) 11% 18%, var(--line) 18%);
+    }
+
+    .portrait {
+      width: 250px;
+      grid-column: 2;
+      grid-row: 1;
+      margin: 0;
+      padding: 10px 10px 18px;
+      position: relative;
+      background: #fffdf8;
+      box-shadow: 14px 16px 0 #e5d8c5;
+    }
+
+    .portrait::after {
+      content: "";
+      height: 6px;
+      position: absolute;
+      right: 10px;
+      bottom: 7px;
+      left: 10px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--earth) 0 18px,
+        var(--gold) 18px 24px,
+        var(--navy) 24px 42px,
+        transparent 42px 48px
+      );
+    }
+
+    .portrait img {
+      height: 292px;
+      border-radius: 0;
+      filter: saturate(.82) contrast(1.02);
+    }
+
+    .portrait figcaption {
+      margin: 10px 0 0;
+      color: #746c61;
+      letter-spacing: .03em;
+    }
+
+    .intro-text {
+      max-width: 760px;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .role {
+      margin-bottom: 14px;
+      color: var(--earth);
+      font-size: .69rem;
+      letter-spacing: .11em;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 24px;
+      color: var(--navy);
+      font-size: clamp(3.2rem, 6.2vw, 5.2rem);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin-bottom: 20px;
+      color: #39342e;
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      line-height: 1.58;
+    }
+
+    .intro-text > p:not(.role, .lead, .origin-note) {
+      color: #655f57;
+      font-size: .87rem;
+    }
+
+    .origin-note {
+      max-width: 700px;
+      margin: 24px 0 0;
+      padding: 15px 0 2px 20px;
+      border-left: 3px solid var(--gold);
+      color: #5e574f;
+      font-size: .84rem;
+    }
+
+    .origin-kicker {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--earth);
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .profile-links {
+      gap: 0;
+      margin-top: 30px;
+      padding-block: 13px;
+      border-block: 1px solid var(--line);
+    }
+
+    .profile-links a {
+      padding: 2px 16px;
+      color: var(--navy);
+      border-right: 1px solid var(--line);
+      font-size: .72rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .profile-links a:first-child { padding-left: 0; }
+    .profile-links a:last-child { border-right: 0; }
+    .profile-links a:hover { color: var(--earth); }
+
+    .content-grid {
+      grid-template-columns: 250px 1fr;
+      gap: 60px;
+      margin-top: 48px;
+      margin-bottom: 48px;
+      padding: 36px 40px;
+      background: rgba(255, 253, 248, .72);
+      border: 1px solid var(--line);
+    }
+
+    .research-interests {
+      padding-right: 34px;
+      border-right: 1px solid var(--line);
+    }
+
+    .content-grid h2,
+    .section-title h2 {
+      color: var(--navy);
+      font-size: 1.55rem;
+      font-weight: 500;
+      letter-spacing: -.02em;
+    }
+
+    .research-interests li {
+      position: relative;
+      padding: 8px 0 8px 13px;
+      border-bottom-color: #e5ddd1;
+    }
+
+    .research-interests li::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      top: 17px;
+      left: 0;
+      background: var(--earth);
+      transform: rotate(45deg);
+    }
+
+    .news-list { border-top-color: var(--navy); }
+    .news-item { border-bottom-color: #e5ddd1; }
+    .news-item time { color: var(--earth); font-weight: 650; }
+
+    .section {
+      padding-block: 74px;
+      border-top-color: var(--line);
+      scroll-margin-top: 90px;
+    }
+
+    .section-title {
+      margin-bottom: 34px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .section-title h2 { margin: 0; }
+    .section-title > a { color: var(--earth); }
+
+    .publication-list > li {
+      grid-template-columns: 64px 1fr;
+      gap: 28px;
+      padding: 25px 18px;
+      border-top-color: #ded5c8;
+      transition: background .18s ease;
+    }
+
+    .publication-list > li:hover { background: rgba(241, 234, 223, .62); }
+    .publication-year { color: var(--earth); font-weight: 700; }
+
+    .publication-list h3 {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+    }
+
+    .publication-list h3 a { color: var(--navy); }
+    .publication-note { color: #77402f; background: #efdfd0; }
+
+    .software-list {
+      gap: 16px;
+      border-top: 0;
+    }
+
+    .software-list article,
+    .software-list article:nth-child(odd),
+    .software-list article:nth-child(even) {
+      min-height: 180px;
+      padding: 28px;
+      background: rgba(255, 253, 248, .75);
+      border: 1px solid var(--line);
+    }
+
+    .software-list h3 {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .software-list h3::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: .48em;
+      left: 0;
+      background: var(--gold);
+      border: 2px solid var(--earth);
+      transform: rotate(45deg);
+    }
+
+    .repository-link { color: var(--earth); font-weight: 650; }
+
+    .impact-note {
+      margin-top: -6px;
+      padding: 28px 32px;
+      color: #f8f1e5;
+      background: var(--navy);
+      border-left: 7px solid var(--earth);
+      box-shadow: inset 0 -4px 0 var(--gold);
+      font-size: 1.08rem;
+    }
+
+    .adoption-summary { border-block-color: var(--navy); }
+    .adoption-summary strong { color: var(--earth); font-size: 2rem; }
+
+    .chart-grid { gap: 20px; }
+
+    .download-chart {
+      padding: 28px;
+      background: rgba(255, 253, 248, .9);
+      border: 1px solid var(--line);
+      box-shadow: 6px 7px 0 #e9dfd1;
+    }
+
+    .download-chart h3 {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 1rem;
+    }
+
+    .bar { background: var(--earth); }
+    .download-chart.huggingface .bar { background: var(--gold); }
+
+    .background-grid > div {
+      padding: 28px 30px;
+      background: rgba(255, 253, 248, .7);
+      border: 1px solid var(--line);
+    }
+
+    .background-grid > div > h3 { color: var(--earth); }
+
+    .award {
+      background: #efe2d2;
+      border-left-color: var(--earth);
+    }
+
+    .award > span { color: var(--earth); }
+
+    footer {
+      margin-top: 42px;
+      position: relative;
+      background: var(--navy);
+    }
+
+    footer::before {
+      content: "";
+      height: 7px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--earth) 0 30px,
+        var(--gold) 30px 38px,
+        #f4eadb 38px 45px,
+        transparent 45px 72px
+      );
+    }
+
+    .footer-inner { min-height: 150px; }
+    .footer-inner span { color: #d7cbbb; }
+    .footer-inner a { color: #f3e7d5; }
+
+    @media (max-width: 820px) {
+      .intro {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 46px;
+        padding-block: 58px;
+      }
+
+      .intro-text {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .portrait {
+        width: 210px;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .portrait img { height: 242px; }
+      .content-grid { grid-template-columns: 1fr; padding: 30px; }
+      .research-interests { padding-right: 0; border-right: 0; }
+    }
+
+    @media (max-width: 560px) {
+      .container,
+      .site-header { width: min(100% - 30px, 1120px); }
+
+      .site-header {
+        position: static;
+        gap: 14px;
+      }
+
+      .site-header nav { gap: 18px; }
+      h1 { font-size: clamp(3rem, 15vw, 4.2rem); }
+      .lead { font-size: 1.08rem; }
+
+      .profile-links a {
+        padding: 4px 10px;
+        border-right: 0;
+      }
+
+      .profile-links a:first-child { padding-left: 10px; }
+      .content-grid { width: min(100% - 20px, 1120px); padding: 26px 20px; }
+      .section { padding-block: 58px; }
+      .publication-list > li { grid-template-columns: 44px 1fr; padding-inline: 4px; }
+      .impact-note { padding: 24px; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -595,7 +1061,8 @@
           I completed my PhD at the Laboratoire Informatique de Paris Nord (LIPN),
           supervised by Nadi Tomeh and Thierry Charnois.
         </p>
-        <p>
+        <p class="origin-note">
+          <span class="origin-kicker">Madagascar → Réunion → Paris → Réunion</span>
           I am originally from Madagascar, where I spent the first fifteen years
           of my life. I later moved to Réunion Island, then to Paris for my studies
           and research, before returning to Réunion.
@@ -859,7 +1326,7 @@
     <div class="container footer-inner">
       <div>
         <strong>Urchade Zaratiana</strong>
-        <span>Natural Language Processing · Information Extraction</span>
+        <span>From Madagascar · Based in Réunion Island · Natural Language Processing</span>
       </div>
       <a href="mailto:urchade.zaratiana@gmail.com">urchade.zaratiana@gmail.com</a>
     </div>
