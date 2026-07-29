@@ -760,14 +760,16 @@
       </div>
       <p class="adoption-intro">
         Public download counts provide a rough view of how GLiNER is being used.
+        The PyPI figures cover every public package whose project name contains
+        <code>gliner</code> or <code>gliner2</code>; PyPI does not provide an equivalent tag filter.
         The Hugging Face figures cover the full public ecosystem of models tagged
         <code>gliner</code> or <code>gliner2</code>, not only models published by the original authors.
         Counts measure file requests rather than unique users.
       </p>
       <div class="adoption-summary">
         <div>
-          <strong>759k</strong>
-          <span>PyPI package downloads · last 30 days</span>
+          <strong>937k</strong>
+          <span>PyPI downloads · 16 GLiNER-related packages, last 30 days</span>
         </div>
         <div>
           <strong>4.01M</strong>
@@ -776,22 +778,24 @@
       </div>
       <div class="chart-grid">
         <figure class="download-chart">
-          <h3>PyPI downloads</h3>
-          <p class="chart-subtitle">Monthly downloads of the <code>gliner</code> package</p>
-          <div class="bar-chart" style="--columns: 6" role="img" aria-label="PyPI monthly downloads: 344 thousand in February, 553 thousand in March, 562 thousand in April, 606 thousand in May, 737 thousand in June, and 701 thousand through 28 July 2026.">
-            <div class="bar-column"><span class="bar-value">344k</span><div class="bar-track"><span class="bar" style="height: 47%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">553k</span><div class="bar-track"><span class="bar" style="height: 75%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">562k</span><div class="bar-track"><span class="bar" style="height: 76%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">606k</span><div class="bar-track"><span class="bar" style="height: 82%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">737k</span><div class="bar-track"><span class="bar" style="height: 100%"></span></div></div>
-            <div class="bar-column"><span class="bar-value">701k</span><div class="bar-track"><span class="bar" style="height: 95%"></span></div></div>
+          <h3>PyPI ecosystem</h3>
+          <p class="chart-subtitle">Monthly downloads across all 16 GLiNER-related packages</p>
+          <div class="bar-chart" style="--columns: 6" role="img" aria-label="Monthly PyPI downloads across all packages whose names contain gliner or gliner2: 445 thousand in February, 731 thousand in March, 715 thousand in April, 696 thousand in May, 849 thousand in June, and 867 thousand through 28 July 2026.">
+            <div class="bar-column"><span class="bar-value">445k</span><div class="bar-track"><span class="bar" style="height: 51%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">731k</span><div class="bar-track"><span class="bar" style="height: 84%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">715k</span><div class="bar-track"><span class="bar" style="height: 82%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">696k</span><div class="bar-track"><span class="bar" style="height: 80%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">849k</span><div class="bar-track"><span class="bar" style="height: 98%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">867k</span><div class="bar-track"><span class="bar" style="height: 100%"></span></div></div>
           </div>
           <div class="bar-labels" style="--columns: 6" aria-hidden="true">
             <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul*</span>
           </div>
           <figcaption>
-            Mirrors excluded. *July includes data through 28 July.
-            Source: <a href="https://pypistats.org/packages/gliner">PyPI Stats</a>.
+            Package names are matched case-insensitively and deduplicated. Mirrors excluded.
+            *July includes data through 28 July. Sources:
+            <a href="https://pypi.org/simple/">PyPI package index</a> and
+            <a href="https://pypistats.org/api/">PyPI Stats</a>.
           </figcaption>
         </figure>
 
