@@ -563,32 +563,34 @@
     /* Editorial identity: Malagasy earth, indigo and woven geometry */
     :root {
       --ink: #28241f;
-      --navy: #193b43;
-      --blue: #9d4633;
-      --earth: #9d4633;
-      --gold: #c69a4b;
-      --muted: #6f6960;
-      --line: #d9d0c3;
-      --paper: #faf7ef;
-      --wash: #f1eadf;
+      --navy: #124b3a;
+      --blue: #b64343;
+      --earth: #b64343;
+      --gold: #207a50;
+      --muted: #656d67;
+      --line: #d6ddd7;
+      --paper: #fbfbf7;
+      --wash: #f0f5f0;
       --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
     }
 
     body {
       border-top: 0;
       background:
-        linear-gradient(rgba(250, 247, 239, .96), rgba(250, 247, 239, .96)),
-        repeating-linear-gradient(90deg, transparent 0 31px, rgba(157, 70, 51, .04) 31px 32px);
+        linear-gradient(rgba(251, 251, 247, .97), rgba(251, 251, 247, .97)),
+        repeating-linear-gradient(90deg, transparent 0 31px, rgba(18, 75, 58, .035) 31px 32px);
     }
 
     body::before {
       content: "";
       display: block;
-      height: 3px;
-      background: linear-gradient(90deg, var(--navy) 0 82%, var(--earth) 82%);
+      height: 4px;
+      background:
+        linear-gradient(90deg, #fff 0 18%, transparent 18%),
+        linear-gradient(180deg, #d94747 0 50%, #08783e 50%);
     }
 
-    ::selection { background: #ead5bd; }
+    ::selection { background: #dcebe0; }
 
     .container,
     .site-header {
@@ -600,7 +602,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(250, 247, 239, .96);
+      background: rgba(251, 251, 247, .96);
       border-bottom-color: rgba(25, 59, 67, .18);
       backdrop-filter: blur(12px);
     }
@@ -614,7 +616,17 @@
       letter-spacing: -.015em;
     }
 
-    .site-name::before { display: none; }
+    .site-name::before {
+      content: "";
+      width: 21px;
+      height: 14px;
+      display: block;
+      flex: 0 0 auto;
+      background:
+        linear-gradient(90deg, #fff 0 34%, transparent 34%),
+        linear-gradient(180deg, #d94747 0 50%, #08783e 50%);
+      border: 1px solid #c9d1cb;
+    }
 
     .site-header nav {
       gap: 28px;
@@ -670,11 +682,31 @@
       margin: 0;
       padding: 10px 10px 18px;
       position: relative;
-      background: #fffdf8;
-      box-shadow: 6px 8px 0 #e5ded4;
+      background: #fff;
+      z-index: 0;
+      box-shadow: 6px 8px 0 #dce8df;
     }
 
     .portrait::after { display: none; }
+
+    .portrait::before {
+      content: "";
+      width: 62px;
+      height: 270px;
+      position: absolute;
+      z-index: -1;
+      top: 18px;
+      right: -34px;
+      background: var(--navy);
+      opacity: .075;
+      clip-path: polygon(
+        34% 0, 66% 0, 66% 12%, 88% 18%, 66% 25%,
+        66% 35%, 82% 42%, 66% 49%, 66% 59%, 88% 67%,
+        66% 75%, 66% 100%, 34% 100%, 34% 75%, 12% 67%,
+        34% 59%, 34% 49%, 18% 42%, 34% 35%, 34% 25%,
+        12% 18%, 34% 12%
+      );
+    }
 
     .portrait img {
       height: 292px;
@@ -762,7 +794,7 @@
       margin-top: 48px;
       margin-bottom: 48px;
       padding: 36px 40px;
-      background: rgba(255, 253, 248, .72);
+      background: rgba(255, 255, 252, .76);
       border: 1px solid var(--line);
     }
 
@@ -782,7 +814,7 @@
     .research-interests li {
       position: relative;
       padding: 8px 0 8px 13px;
-      border-bottom-color: #e5ddd1;
+      border-bottom-color: #e1e8e2;
     }
 
     .research-interests li::before {
@@ -797,7 +829,7 @@
     }
 
     .news-list { border-top-color: var(--navy); }
-    .news-item { border-bottom-color: #e5ddd1; }
+    .news-item { border-bottom-color: #e1e8e2; }
     .news-item time { color: var(--earth); font-weight: 650; }
 
     .section {
@@ -819,7 +851,7 @@
       grid-template-columns: 64px 1fr;
       gap: 28px;
       padding: 25px 18px;
-      border-top-color: #ded5c8;
+      border-top-color: #d8e0da;
       transition: background .18s ease;
     }
 
@@ -833,7 +865,7 @@
     }
 
     .publication-list h3 a { color: var(--navy); }
-    .publication-note { color: #77402f; background: #efdfd0; }
+    .publication-note { color: #8e3434; background: #f4e4e2; }
 
     .software-list {
       gap: 16px;
@@ -845,7 +877,7 @@
     .software-list article:nth-child(even) {
       min-height: 180px;
       padding: 28px;
-      background: rgba(255, 253, 248, .75);
+      background: rgba(255, 255, 252, .78);
       border: 1px solid var(--line);
     }
 
@@ -871,10 +903,10 @@
     .impact-note {
       margin-top: -6px;
       padding: 28px 32px;
-      color: #f8f1e5;
+      color: #f7fbf8;
       background: var(--navy);
       border-left: 7px solid var(--earth);
-      box-shadow: inset 0 -4px 0 var(--gold);
+      box-shadow: inset 0 -3px 0 var(--earth);
       font-size: 1.08rem;
     }
 
@@ -885,9 +917,9 @@
 
     .download-chart {
       padding: 28px;
-      background: rgba(255, 253, 248, .9);
+      background: rgba(255, 255, 252, .94);
       border: 1px solid var(--line);
-      box-shadow: 6px 7px 0 #e9dfd1;
+      box-shadow: 6px 7px 0 #dde8df;
     }
 
     .download-chart h3 {
@@ -896,19 +928,19 @@
       font-size: 1rem;
     }
 
-    .bar { background: var(--earth); }
-    .download-chart.huggingface .bar { background: var(--gold); }
+    .bar { background: var(--gold); }
+    .download-chart.huggingface .bar { background: var(--earth); }
 
     .background-grid > div {
       padding: 28px 30px;
-      background: rgba(255, 253, 248, .7);
+      background: rgba(255, 255, 252, .76);
       border: 1px solid var(--line);
     }
 
     .background-grid > div > h3 { color: var(--earth); }
 
     .award {
-      background: #efe2d2;
+      background: #eef5ef;
       border-left-color: var(--earth);
     }
 
@@ -927,7 +959,7 @@
       top: 0;
       right: 0;
       left: 0;
-      background: linear-gradient(90deg, var(--earth), var(--gold));
+      background: linear-gradient(90deg, #d94747 0 50%, #08783e 50%);
     }
 
     .footer-inner { min-height: 150px; }
