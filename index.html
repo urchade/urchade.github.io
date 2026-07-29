@@ -311,6 +311,127 @@
 
     .repository-link { font-size: .73rem; }
 
+    .adoption-intro {
+      max-width: 730px;
+      margin: -12px 0 30px;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    .adoption-summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-block: 1px solid var(--line);
+    }
+
+    .adoption-summary > div {
+      padding: 18px 0;
+    }
+
+    .adoption-summary > div + div {
+      padding-left: 32px;
+      border-left: 1px solid var(--line);
+    }
+
+    .adoption-summary strong {
+      display: block;
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .adoption-summary span {
+      color: var(--muted);
+      font-size: .74rem;
+    }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px;
+      margin-top: 36px;
+    }
+
+    .download-chart {
+      min-width: 0;
+      margin: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .download-chart h3 {
+      margin: 0 0 2px;
+      font-family: var(--sans);
+      font-size: .88rem;
+    }
+
+    .chart-subtitle {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: .7rem;
+    }
+
+    .bar-chart {
+      height: 220px;
+      display: grid;
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+      gap: 10px;
+      align-items: end;
+      padding-top: 20px;
+      border-bottom: 1px solid #bfc6cc;
+    }
+
+    .bar-column {
+      height: 100%;
+      display: grid;
+      grid-template-rows: 20px 1fr;
+      gap: 5px;
+      align-items: end;
+      text-align: center;
+    }
+
+    .bar-value {
+      color: var(--muted);
+      font-size: .61rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .bar-track {
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .bar {
+      width: min(38px, 80%);
+      min-height: 3px;
+      background: var(--navy);
+    }
+
+    .download-chart.huggingface .bar { background: var(--blue); }
+
+    .bar-labels {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: .62rem;
+      text-align: center;
+    }
+
+    .download-chart figcaption {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .68rem;
+      line-height: 1.5;
+    }
+
     .background-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -401,7 +522,7 @@
       .portrait { width: 180px; }
       .portrait img { height: 210px; }
       .content-grid { grid-template-columns: 1fr; gap: 45px; }
-      .software-list, .background-grid { grid-template-columns: 1fr; }
+      .software-list, .background-grid, .chart-grid { grid-template-columns: 1fr; }
 
       .software-list article,
       .software-list article:nth-child(odd),
@@ -412,6 +533,13 @@
       }
 
       .background-grid { gap: 35px; }
+
+      .adoption-summary { grid-template-columns: 1fr; }
+      .adoption-summary > div + div {
+        padding-left: 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
 
       .footer-inner {
         align-items: flex-start;
@@ -436,6 +564,7 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#software">Software</a>
+      <a href="#adoption">Adoption</a>
       <a href="#about">About</a>
     </nav>
   </header>
@@ -621,6 +750,67 @@
           <p>Autoregressive span-based text-to-graph framework for information extraction.</p>
           <a class="repository-link" href="https://github.com/urchade/ATG">GitHub repository</a>
         </article>
+      </div>
+    </section>
+
+    <section class="container section" id="adoption">
+      <div class="section-title">
+        <h2>GLiNER adoption</h2>
+        <span class="chart-subtitle">Updated 29 July 2026</span>
+      </div>
+      <p class="adoption-intro">
+        Public download counts provide a rough view of how GLiNER is being used.
+        They measure file requests rather than unique users.
+      </p>
+      <div class="adoption-summary">
+        <div>
+          <strong>759k</strong>
+          <span>PyPI package downloads · last 30 days</span>
+        </div>
+        <div>
+          <strong>358k</strong>
+          <span>Hugging Face model downloads · GLiNER family, current 30-day window</span>
+        </div>
+      </div>
+      <div class="chart-grid">
+        <figure class="download-chart">
+          <h3>PyPI downloads</h3>
+          <p class="chart-subtitle">Monthly downloads of the <code>gliner</code> package</p>
+          <div class="bar-chart" style="--columns: 6" role="img" aria-label="PyPI monthly downloads: 344 thousand in February, 553 thousand in March, 562 thousand in April, 606 thousand in May, 737 thousand in June, and 701 thousand through 28 July 2026.">
+            <div class="bar-column"><span class="bar-value">344k</span><div class="bar-track"><span class="bar" style="height: 47%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">553k</span><div class="bar-track"><span class="bar" style="height: 75%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">562k</span><div class="bar-track"><span class="bar" style="height: 76%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">606k</span><div class="bar-track"><span class="bar" style="height: 82%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">737k</span><div class="bar-track"><span class="bar" style="height: 100%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">701k</span><div class="bar-track"><span class="bar" style="height: 95%"></span></div></div>
+          </div>
+          <div class="bar-labels" style="--columns: 6" aria-hidden="true">
+            <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul*</span>
+          </div>
+          <figcaption>
+            Mirrors excluded. *July includes data through 28 July.
+            Source: <a href="https://pypistats.org/packages/gliner">PyPI Stats</a>.
+          </figcaption>
+        </figure>
+
+        <figure class="download-chart huggingface">
+          <h3>Hugging Face downloads</h3>
+          <p class="chart-subtitle">Cumulative downloads of <code>gliner_multi-v2.1</code></p>
+          <div class="bar-chart" style="--columns: 5" role="img" aria-label="Cumulative Hugging Face downloads for gliner multi version 2.1: 298 thousand in January 2025, 357 thousand in June 2025, 493 thousand in October 2025, 512 thousand in December 2025, and 834 thousand in July 2026.">
+            <div class="bar-column"><span class="bar-value">298k</span><div class="bar-track"><span class="bar" style="height: 36%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">357k</span><div class="bar-track"><span class="bar" style="height: 43%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">493k</span><div class="bar-track"><span class="bar" style="height: 59%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">512k</span><div class="bar-track"><span class="bar" style="height: 61%"></span></div></div>
+            <div class="bar-column"><span class="bar-value">834k</span><div class="bar-track"><span class="bar" style="height: 100%"></span></div></div>
+          </div>
+          <div class="bar-labels" style="--columns: 5" aria-hidden="true">
+            <span>Jan ’25</span><span>Jun ’25</span><span>Oct ’25</span><span>Dec ’25</span><span>Jul ’26</span>
+          </div>
+          <figcaption>
+            Historical public snapshots and current Hub counter.
+            Source: <a href="https://huggingface.co/urchade/gliner_multi-v2.1">Hugging Face</a>.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
