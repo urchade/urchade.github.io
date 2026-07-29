@@ -584,14 +584,8 @@
     body::before {
       content: "";
       display: block;
-      height: 8px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--earth) 0 28px,
-        var(--gold) 28px 36px,
-        var(--navy) 36px 64px,
-        var(--paper) 64px 72px
-      );
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy) 0 82%, var(--earth) 82%);
     }
 
     ::selection { background: #ead5bd; }
@@ -620,16 +614,7 @@
       letter-spacing: -.015em;
     }
 
-    .site-name::before {
-      content: "";
-      width: 22px;
-      height: 22px;
-      background:
-        linear-gradient(45deg, transparent 38%, var(--gold) 39% 61%, transparent 62%),
-        linear-gradient(-45deg, transparent 38%, var(--earth) 39% 61%, transparent 62%);
-      border: 1px solid var(--navy);
-      transform: rotate(45deg);
-    }
+    .site-name::before { display: none; }
 
     .site-header nav {
       gap: 28px;
@@ -660,11 +645,11 @@
     .site-header nav a:hover::after { transform: scaleX(1); }
 
     .intro {
-      min-height: 590px;
+      min-height: 530px;
       grid-template-columns: minmax(0, 1fr) 250px;
-      gap: 88px;
+      gap: 68px;
       align-items: center;
-      padding-block: 78px 72px;
+      padding-block: 66px 62px;
       position: relative;
     }
 
@@ -686,24 +671,10 @@
       padding: 10px 10px 18px;
       position: relative;
       background: #fffdf8;
-      box-shadow: 14px 16px 0 #e5d8c5;
+      box-shadow: 6px 8px 0 #e5ded4;
     }
 
-    .portrait::after {
-      content: "";
-      height: 6px;
-      position: absolute;
-      right: 10px;
-      bottom: 7px;
-      left: 10px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--earth) 0 18px,
-        var(--gold) 18px 24px,
-        var(--navy) 24px 42px,
-        transparent 42px 48px
-      );
-    }
+    .portrait::after { display: none; }
 
     .portrait img {
       height: 292px;
@@ -734,7 +705,7 @@
       max-width: 720px;
       margin-bottom: 24px;
       color: var(--navy);
-      font-size: clamp(3.2rem, 6.2vw, 5.2rem);
+      font-size: clamp(3rem, 5.2vw, 4.35rem);
       font-weight: 500;
       line-height: .98;
       letter-spacing: -.045em;
@@ -756,22 +727,14 @@
 
     .origin-note {
       max-width: 700px;
-      margin: 24px 0 0;
-      padding: 15px 0 2px 20px;
-      border-left: 3px solid var(--gold);
+      margin: 15px 0 0;
+      padding: 0;
+      border-left: 0;
       color: #5e574f;
-      font-size: .84rem;
+      font-size: .8rem;
     }
 
-    .origin-kicker {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--earth);
-      font-size: .66rem;
-      font-weight: 700;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-    }
+    .origin-kicker { display: none; }
 
     .profile-links {
       gap: 0;
@@ -959,18 +922,12 @@
 
     footer::before {
       content: "";
-      height: 7px;
+      height: 3px;
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--earth) 0 30px,
-        var(--gold) 30px 38px,
-        #f4eadb 38px 45px,
-        transparent 45px 72px
-      );
+      background: linear-gradient(90deg, var(--earth), var(--gold));
     }
 
     .footer-inner { min-height: 150px; }
@@ -1062,10 +1019,8 @@
           supervised by Nadi Tomeh and Thierry Charnois.
         </p>
         <p class="origin-note">
-          <span class="origin-kicker">Madagascar → Réunion → Paris → Réunion</span>
-          I am originally from Madagascar, where I spent the first fifteen years
-          of my life. I later moved to Réunion Island, then to Paris for my studies
-          and research, before returning to Réunion.
+          Originally from Madagascar and now based in Réunion Island, I also spent
+          several years in Paris for my studies and research.
         </p>
         <div class="profile-links" aria-label="Profile links">
           <a href="mailto:urchade.zaratiana@gmail.com">Email</a>
@@ -1326,7 +1281,7 @@
     <div class="container footer-inner">
       <div>
         <strong>Urchade Zaratiana</strong>
-        <span>From Madagascar · Based in Réunion Island · Natural Language Processing</span>
+        <span>Natural Language Processing · Information Extraction</span>
       </div>
       <a href="mailto:urchade.zaratiana@gmail.com">urchade.zaratiana@gmail.com</a>
     </div>
